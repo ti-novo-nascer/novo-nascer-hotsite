@@ -1,0 +1,9 @@
+.slider {
+  width: 100%;
+  height: 480px;
+  div {
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+  }
+}

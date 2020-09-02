@@ -14,35 +14,39 @@
   }
 }
 
-.rightMenu {
+.leftMenu {
   align-self: center;
   display: grid;
   grid-auto-flow: column;
   .logo {
-    width: 120px;
+    height: 96px;
+    transform: translateY(8px)
   }
 }
 
-.leftMenu {
+.rightMenu {
   align-self: center;
   a {
     button {
-      padding: 16px;
+      padding: 12px 16px;
       border: none;
       border-radius: 8px;
-      background: #A4C2A5;
+      background: #85AD86;
       display: grid;
       grid-auto-flow: column;
       gap: 16px;
       cursor: pointer;
       img {
-        width: 32px;
+        width: 24px;
       }
       span {
-        font: bold 20px 'Raleway', sans-serif;
+        font: bold 18px 'Raleway', sans-serif;
         color: #FFFFFF;
         align-self: center;
       }
+    }
+    button:hover {
+      background: #629363;
     }
   }
 }
@@ -59,11 +63,11 @@
     }
   }
 
-  .rightMenu {
+  .leftMenu {
     justify-self: center;
   }
 
-  .leftMenu {
+  .rightMenu {
     justify-self: center;
   }
 }
