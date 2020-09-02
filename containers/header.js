@@ -1,3 +1,4 @@
+import WhatsApp from '../components/whatsapp'
 import styles from '../styles/header.module.scss'
 
 export default function Header() {
@@ -12,7 +13,7 @@ export default function Header() {
         <div className={styles.rightMenu}>
           <a href='https://wa.me/5581973163700' target='_blank'>
             <button>
-              <img src='images/whatsapp-icon.svg' alt='WhatsApp'/>
+              <WhatsApp width={24} height={24} hexColor={'#FFFFFF'}/>
               <span>Fale conosco</span>
             </button>
           </a>
