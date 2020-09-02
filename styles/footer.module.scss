@@ -1,9 +1,53 @@
 .footer {
   width: 100%;
-  height: 200px;
   padding: 0 40px;
   background: #EFECE5;
+}
+
+.wrapper {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 64px;
+}
+
+.list {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  h3 {
+    font: bold 16px 'Raleway', sans-serif;
+    color: #A09678;
+  }
   ul {
     display: grid;
+    gap: 16px;
+    li {
+      a {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        gap: 16px;
+        svg {
+          align-self: center;
+        }
+        span {
+          font: 14px 'Raleway', sans-serif;
+          color: #A09678;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
   }
 }
