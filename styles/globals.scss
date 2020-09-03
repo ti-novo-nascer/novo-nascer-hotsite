@@ -12,6 +12,10 @@ input, textarea, button {
   outline: none;
 }
 
+textarea {
+  resize: none;
+}
+
 a {
   text-decoration: none;
 }
