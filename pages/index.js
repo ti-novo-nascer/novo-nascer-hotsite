@@ -1,6 +1,7 @@
 import Seo from '../containers/seo'
 import Header from '../containers/header'
 import Slider from '../containers/slider'
+import Content from '../containers/content'
 import ContactForm from '../containers/contact-form'
 import Footer from '../containers/footer'
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Seo {...pageData}/>
       <Header/>
       <Slider/>
+      <Content/>
       <ContactForm/>
       <Footer/>
     </>

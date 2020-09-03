@@ -1,0 +1,51 @@
+.content {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  img {
+    width: 100%;
+  }
+  div {
+    width: 100%;
+    h2 {
+      margin-bottom: 24px;
+      font: 32px 'DM Serif Text', serif;
+      color: #5076B8;
+      text-align: center;
+    }
+    p {
+      font: 16px 'Raleway', sans-serif;
+      color: #A09678;
+      text-align: justify;
+      line-height: 1.8;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "txt"
+      "img";
+    div {
+      grid-area: txt;
+    }
+    img {
+      grid-area: img;
+    }
+  }
+}

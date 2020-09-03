@@ -4,7 +4,7 @@ export default function Slider() {
   return (
     <section className={styles.slider}>
       <div>
-        <img src='images/main-banner.jpg' alt='Clínica Hospitalar Novo Nascer'/>
+        <img src='images/clinica-hospitalar-novo-nascer.jpg' alt='Clínica Hospitalar Novo Nascer'/>
       </div>
     </section>
   )
