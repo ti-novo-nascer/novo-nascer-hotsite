@@ -15,8 +15,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  img {
-    width: 100%;
+  picture {
+    img {
+      width: 100%;
+    }
   }
   div {
     width: 100%;
@@ -44,7 +46,7 @@
     div {
       grid-area: txt;
     }
-    img {
+    picture {
       grid-area: img;
     }
   }

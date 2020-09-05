@@ -31,8 +31,7 @@
 }
 
 .logo {
-  height: 96px;
-  transform: translateY(8px)
+  height: 80px;
 }
 
 .rightMenu {
@@ -47,6 +46,9 @@
       grid-auto-flow: column;
       gap: 16px;
       cursor: pointer;
+      svg {
+        align-self: center;
+      }
       span {
         font: bold 18px 'Raleway', sans-serif;
         color: #FFFFFF;

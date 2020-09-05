@@ -13,8 +13,8 @@ export default function Header() {
         <div className={styles.rightMenu}>
           <a href='https://wa.me/5581973163700' target='_blank'>
             <button>
-              <WhatsApp width={24} height={24} fill={'#FFFFFF'}/>
-              <span>Fale conosco</span>
+              <WhatsApp width={40} height={40} fill={'#FFFFFF'}/>
+              <span>Fale conosco<br/>(81) 973-163-700</span>
             </button>
           </a>
         </div>

@@ -59,4 +59,11 @@
     grid-auto-flow: row;
     grid-template-columns: 1fr;
   }
+
+  .list {
+    justify-content: center;
+    h3 {
+      justify-self: center;
+    }
+  }
 }
