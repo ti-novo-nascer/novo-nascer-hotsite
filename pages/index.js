@@ -2,6 +2,7 @@ import Seo from '../containers/seo'
 import Header from '../containers/header'
 import Banner from '../containers/banner'
 import Content from '../containers/content'
+import Service from '../containers/service'
 import ContactForm from '../containers/contact-form'
 import Footer from '../containers/footer'
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Header/>
       <Banner/>
       <Content/>
+      <Service/>
       <ContactForm/>
       <Footer/>
     </>
