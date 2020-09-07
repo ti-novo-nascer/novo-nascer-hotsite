@@ -1,3 +1,4 @@
+import Email from '../components/email'
 import WhatsApp from '../components/whatsapp'
 import styles from '../styles/header.module.scss'
 
@@ -11,10 +12,16 @@ export default function Header() {
           </a>
         </div>
         <div className={styles.rightMenu}>
+          <a href='mailto:contato@novonascer.com.br' target='_blank'>
+            <button>
+              <Email width={32} height={32} fill={'#A09678'}/>
+              <span>contato@novonascer.com.br</span>
+            </button>
+          </a>
           <a href='https://wa.me/5581973163700' target='_blank'>
             <button>
-              <WhatsApp width={40} height={40} fill={'#FFFFFF'}/>
-              <span>Fale conosco<br/>(81) 973-163-700</span>
+              <WhatsApp width={32} height={32} fill={'#FFFFFF'}/>
+              <span>(81) 973-163-700</span>
             </button>
           </a>
         </div>
