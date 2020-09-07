@@ -7,7 +7,7 @@ export default function Banner() {
         <source media='(max-width: 960px)' srcSet='images/paciente-em-monitoramento.webp' type='image/webp'/>
         <source media='(max-width: 960px)' srcSet='images/paciente-em-monitoramento.jpg' type='image/jpeg'/>
         <source srcSet='images/pacientes-em-monitoramento.webp' type='image/webp'/>
-        <img src='images/pacientes-em-monitoramento.jpg' alt='Pacientes em monitoramento'/>
+        <img src='images/pacientes-em-monitoramento.jpg' alt='Pacientes em monitoramento' loading='lazy'/>
       </picture>
     </section>
   )

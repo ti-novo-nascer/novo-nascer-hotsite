@@ -15,25 +15,25 @@ export default function Footer() {
           <h3>Redes Sociais</h3>
           <ul>
             <li>
-              <a href='https://wa.me/5581973163700' target='_blank'>
+              <a href='https://wa.me/5581973163700' target='_blank' rel='noopener noreferrer'>
                 <WhatsApp width={24} height={24} fill={'#A09678'}/>
                 <span>WhatsApp</span>
               </a>
             </li>
             <li>
-              <a href='https://www.instagram.com/novonascer' target='_blank'>
+              <a href='https://www.instagram.com/novonascer' target='_blank' rel='noopener noreferrer'>
                 <Instagram width={24} height={24} fill={'#A09678'}/>
                 <span>Instagram</span>
               </a>
             </li>
             <li>
-              <a href='https://www.youtube.com/user/novonascer' target='_blank'>
+              <a href='https://www.youtube.com/user/novonascer' target='_blank' rel='noopener noreferrer'>
                 <Youtube width={24} height={24} fill={'#A09678'}/>
                 <span>Youtube</span>
               </a>
             </li>
             <li>
-              <a href='https://www.facebook.com/novonascer' target='_blank'>
+              <a href='https://www.facebook.com/novonascer' target='_blank' rel='noopener noreferrer'>
                 <Facebook width={24} height={24} fill={'#A09678'}/>
                 <span>Facebook</span>
               </a>
@@ -45,18 +45,18 @@ export default function Footer() {
           <ul>
             <li>
               <a href='tel:5581973163700' target='_blank'>
-                <Phone width={24} height={24} fill={'#A09678'}/>
+                <Phone width={24} height={24} fill={'#A09678'} rel='noopener noreferrer'/>
                 <span>Telefone</span>
               </a>
             </li>
             <li>
-              <a href='mailto:contato@novonascer.com.br' target='_blank'>
+              <a href='mailto:contato@novonascer.com.br' target='_blank' rel='noopener noreferrer'>
                 <Email width={24} height={24} fill={'#A09678'}/>
                 <span>Email</span>
               </a>
             </li>
             <li>
-              <a href='https://g.page/r/CcVktdl66f64EAE' target='_blank'>
+              <a href='https://g.page/r/CcVktdl66f64EAE' target='_blank' rel='noopener noreferrer'>
                 <Localization width={24} height={24} fill={'#A09678'}/>
                 <span>Localização</span>
               </a>
