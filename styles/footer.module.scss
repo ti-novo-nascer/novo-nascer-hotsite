@@ -36,18 +36,35 @@
     display: grid;
     gap: 16px;
     li {
+      display: grid;
+      gap: 4px;
       a {
         display: grid;
         grid-auto-flow: column;
         justify-content: start;
         gap: 16px;
         svg {
+          width: 24px;
+          height: 24px;
           align-self: center;
+          path {
+            fill: #A09678
+          }
         }
         span {
           font: 14px 'Raleway', sans-serif;
           color: #A09678;
           align-self: center;
+        }
+      }
+      a:hover {
+        svg {
+          path {
+            fill: #837753
+          }
+        }
+        span {
+          color: #837753;
         }
       }
     }

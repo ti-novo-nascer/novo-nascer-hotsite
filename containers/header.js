@@ -1,3 +1,4 @@
+import ExternalLink from '../components/external-link'
 import Email from '../components/email'
 import WhatsApp from '../components/whatsapp'
 import styles from '../styles/header.module.scss'
@@ -7,23 +8,27 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.wrapper}>
         <div className={styles.leftMenu}>
-          <a href='https://www.novonascer.com.br/' target='_blank' rel='noopener noreferrer'>
-            <img className={styles.logo} src='logo.svg' alt='Campanha do Setembro Amarelo da Clínica Hospitalar Novo Nascer'/>
-          </a>
+          <ExternalLink href='https://www.novonascer.com.br/'>
+            <img
+              className={styles.logo}
+              src='logo.svg'
+              alt='Campanha do Setembro Amarelo da Clínica Hospitalar Novo Nascer'
+            />
+          </ExternalLink>
         </div>
         <div className={styles.rightMenu}>
-          <a href='mailto:contato@novonascer.com.br' target='_blank' rel='noopener noreferrer'>
+          <ExternalLink href='mailto:contato@novonascer.com.br'>
             <button>
-              <Email width={32} height={32} fill={'#A09678'}/>
+              <Email/>
               <span>contato@novonascer.com.br</span>
             </button>
-          </a>
-          <a href='https://wa.me/5581973163700' target='_blank' rel='noopener noreferrer'>
+          </ExternalLink>
+          <ExternalLink href='https://wa.me/5581973163700'>
             <button>
-              <WhatsApp width={32} height={32} fill={'#FFFFFF'}/>
+              <WhatsApp/>
               <span>(81) 973-163-700</span>
             </button>
-          </a>
+          </ExternalLink>
         </div>
       </div>
     </header>

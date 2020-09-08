@@ -1,11 +1,40 @@
+import ExternalLink from '../components/external-link'
 import WhatsApp from '../components/whatsapp'
 import Instagram from '../components/instagram'
 import Youtube from '../components/youtube'
 import Facebook from '../components/facebook'
-import Phone from '../components/phone'
-import Email from '../components/email'
-import Localization from '../components/localization'
 import styles from '../styles/footer.module.scss'
+
+const baseUrl = 'https://www.novonascer.com.br'
+
+const addictionTreatments = [
+  { title: 'Tabagismo', path: 'tabagismo' },
+  { title: 'Sexo', path: 'sexo' },
+  { title: 'Vigorexia', path: 'vigorexia' },
+  { title: 'Compras', path: 'compras' },
+  { title: 'Internet', path: 'internet' },
+  { title: 'Jogo', path: 'jogo' },
+  { title: 'MDMA', path: 'mdma' },
+  { title: 'LSD', path: 'lsd' },
+  { title: 'Múltiplas Drogas', path: 'multiplas-drogas' },
+  { title: 'Medicamentos', path: 'medicamentos' },
+  { title: 'Maconha', path: 'maconha' },
+  { title: 'Crack', path: 'crack' },
+  { title: 'Cocaína', path: 'cocaina' },
+  { title: 'Alcoolismo', path: 'alcoolismo' }
+]
+
+const psychiatryTreatments = [
+  { title: 'Ciúme Patológico', path: 'ciume-patologico' },
+  { title: 'Bulimia Nervosa', path: 'bulimia-nervosa' },
+  { title: 'Anorexia Nervosa', path: 'anorexia-nervosa' },
+  { title: 'Esquizofrenia', path: 'esquizofrenia' },
+  { title: 'Depressão', path: 'depressao' },
+  { title: 'Burnout', path: 'burnout' },
+  { title: 'Borderline', path: 'borderline' },
+  { title: 'Bipolaridade', path: 'bipolaridade' },
+  { title: 'Comportamento Suicida', path: 'comportamento-suicida' }
+]
 
 export default function Footer() {
   return (
@@ -15,51 +44,56 @@ export default function Footer() {
           <h3>Redes Sociais</h3>
           <ul>
             <li>
-              <a href='https://wa.me/5581973163700' target='_blank' rel='noopener noreferrer'>
-                <WhatsApp width={24} height={24} fill={'#A09678'}/>
+              <ExternalLink href='https://wa.me/5581973163700'>
+                <WhatsApp/>
                 <span>WhatsApp</span>
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a href='https://www.instagram.com/novonascer' target='_blank' rel='noopener noreferrer'>
-                <Instagram width={24} height={24} fill={'#A09678'}/>
+              <ExternalLink href='https://www.instagram.com/novonascer'>
+                <Instagram/>
                 <span>Instagram</span>
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a href='https://www.youtube.com/user/novonascer' target='_blank' rel='noopener noreferrer'>
-                <Youtube width={24} height={24} fill={'#A09678'}/>
+              <ExternalLink href='https://www.youtube.com/user/novonascer'>
+                <Youtube/>
                 <span>Youtube</span>
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a href='https://www.facebook.com/novonascer' target='_blank' rel='noopener noreferrer'>
-                <Facebook width={24} height={24} fill={'#A09678'}/>
+              <ExternalLink href='https://www.facebook.com/novonascer'>
+                <Facebook/>
                 <span>Facebook</span>
-              </a>
+              </ExternalLink>
             </li>
           </ul>
         </div>
         <div className={styles.list}>
-          <h3>Contatos</h3>
+          <h3>Tratamentos de Depedências</h3>
           <ul>
             <li>
-              <a href='tel:5581973163700' target='_blank'>
-                <Phone width={24} height={24} fill={'#A09678'} rel='noopener noreferrer'/>
-                <span>Telefone</span>
-              </a>
+              {addictionTreatments.map(({ title, path }) => {
+                return (
+                  <ExternalLink key={path} href={`${baseUrl}/oque-tratamos/${path}`}>
+                    <span>{title}</span>
+                  </ExternalLink>
+                )
+              })}
             </li>
+          </ul>
+        </div>
+        <div className={styles.list}>
+          <h3>Tratamentos de Psiquiatria</h3>
+          <ul>
             <li>
-              <a href='mailto:contato@novonascer.com.br' target='_blank' rel='noopener noreferrer'>
-                <Email width={24} height={24} fill={'#A09678'}/>
-                <span>Email</span>
-              </a>
-            </li>
-            <li>
-              <a href='https://g.page/r/CcVktdl66f64EAE' target='_blank' rel='noopener noreferrer'>
-                <Localization width={24} height={24} fill={'#A09678'}/>
-                <span>Localização</span>
-              </a>
+              {psychiatryTreatments.map(({ title, path }) => {
+                return (
+                  <ExternalLink key={path} href={`${baseUrl}/oque-tratamos/${path}`}>
+                    <span>{title}</span>
+                  </ExternalLink>
+                )
+              })}
             </li>
           </ul>
         </div>
