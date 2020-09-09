@@ -11,7 +11,7 @@ export default function Content() {
           </div>
           <picture>
             <source srcSet='images/paciente-em-acompanhamento.webp' type='image/webp'/>
-            <img src='images/paciente-em-acompanhamento.webp' alt='Acompanhamento de paciente' loading='lazy'/>
+            <img src='images/paciente-em-acompanhamento.jpg' alt='Acompanhamento de paciente' loading='lazy'/>
           </picture>
         </div>
         <div className={styles.card}>

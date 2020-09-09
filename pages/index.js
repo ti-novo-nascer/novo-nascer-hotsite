@@ -2,6 +2,7 @@ import Seo from '../containers/seo'
 import Header from '../containers/header'
 import Banner from '../containers/banner'
 import Presentation from '../containers/presentation'
+import Quote from '../containers/quote'
 import Content from '../containers/content'
 import Service from '../containers/service'
 import ContactForm from '../containers/contact-form'
@@ -21,6 +22,7 @@ export default function Home() {
       <Header/>
       <Banner/>
       <Presentation/>
+      <Quote/>
       <Content/>
       <Service/>
       <ContactForm/>
