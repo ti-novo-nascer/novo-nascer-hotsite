@@ -32,8 +32,20 @@
     li {
       display: grid;
       grid-auto-flow: column;
+      justify-content: start;
+      align-content: start;
       gap: 20px;
+      svg {
+        width: 128px;
+        height: 128px;
+        path {
+          fill: #A09678;
+        }
+      }
       div {
+        align-self: start;
+        display: grid;
+        gap: 8px;
         h4 {
           font: bold 16px 'Raleway', sans-serif;
           color: #837753;

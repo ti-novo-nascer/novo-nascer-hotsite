@@ -1,10 +1,25 @@
-import Medicine from '../components/medicine'
+import MedicalHistory from '../components/medical-history'
+import Female from '../components/female'
+import Telemarketer from '../components/telemarketer'
+import Family from '../components/family'
+import Breakfast from '../components/breakfast'
 import AirConditioner from '../components/air-conditioner'
-import Apple from '../components/apple'
-import Stethoscope from '../components/stethoscope'
-import Group from '../components/group'
+import Community from '../components/community'
+import Medicine from '../components/medicine'
 import Ambulance from '../components/ambulance'
 import styles from '../styles/service.module.scss'
+
+const service = [
+  { icon: MedicalHistory, title: 'Cuidados intensivos de enfermagem', content: 'Liderados e orientados por nossa equipe médica clínica e psiquiátrica, os enfermeiros garantem o prosseguir das terapêuticas aplicadas diariamente, 24h por dia' },
+  { icon: Female, title: 'Espaço exclusivo para mulheres', content: 'Desde o momento da chegada, a paciente encontra espaços somente para mulheres' },
+  { icon: Telemarketer, title: 'Atendimento e monitoramento pessoal e eletrônico 24 horas', content: 'O atendimento recebe demandas de segunda a segunda, em todas as horas, para estarmos acessível às demandas que não têm hora para acontecer por natureza'},
+  { icon: Family, title: 'Tratamento com família presente', content: 'Buscamos incluir a família em cada fase do tratamento e que conta com um grupo terapêutico para a troca de experiências entre familiares e o fortalecimento mútuo na jornada da superação' },
+  { icon: Breakfast, title: 'Refeições saborosas e balanceadas', content: 'A alimentação de cada paciente é coordenada por nutricionistas que elaboram dietas especiais variadas no caso de necessidades de saúde' },
+  { icon: AirConditioner, title: 'Suítes climatizadas', content: 'Todas as nossas suítes são climatizadas e possuem têm TV LCD ou LED, chuveiros aquecidos à gás, armários, camas tipo box ou hospitalar residencial (camas HR) caso necessário' },
+  { icon: Community, title: 'Grupos terapêuticos e atendimentos individuais', content: 'O paciente tem acesso a terapias ora em grupos, ora individualmente, para aquisição de novas posturas e conhecimentos para o próprio empoderamento e enriquecimento pessoal' },
+  { icon: Medicine, title: 'Exames e medicamentos de última geração', content: 'Temos um portfólio medicamento de ponta, moderno, em nossa farmácia que é própria e dentro da instituição' },
+  { icon: Ambulance, title: 'Equipagem hospitalar', content: 'A equipagem hospitalar está presente em vários ambientes, como os carrinhos de emergência (para PCRs ou paradas cardiorrespiratórias), camas hospitalares residenciais e nossa ambulância' }
+]
 
 export default function Service() {
   return (
@@ -12,52 +27,21 @@ export default function Service() {
       <div className={styles.wrapper}>
         <div className={styles.sectionHead}>
           <h2>O que oferecemos</h2>
-          <h3>Não medimos esforços para garantir uma recuperação efetiva</h3>
+          <h3>Não medimos esforços para garantir uma recuperação efetiva e estadia segura</h3>
         </div>
         <div className={styles.sectionBody}>
           <ul>
-            <li>
-              <Medicine width={128} height={128} fill={'#A09678'}/>
-              <div>
-                <h4>Exames e medicamentos de última geração</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida.</p>
-              </div>
-            </li>
-            <li>
-              <AirConditioner width={128} height={128} fill={'#A09678'}/>
-              <div>
-                <h4>Suítes climatizadas</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida.</p>
-              </div>
-            </li>
-            <li>
-              <Apple width={128} height={128} fill={'#A09678'}/>
-              <div>
-                <h4>Receitas saudáveis e saborosas</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida.</p>
-              </div>
-            </li>
-            <li>
-              <Stethoscope width={128} height={128} fill={'#A09678'}/>
-              <div>
-                <h4>Cuidados intensivos de enfermagem</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida.</p>
-              </div>
-            </li>
-            <li>
-              <Group width={128} height={128} fill={'#A09678'}/>
-              <div>
-                <h4>Grupos terapêuticos</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida.</p>
-              </div>
-            </li>
-            <li>
-              <Ambulance width={128} height={128} fill={'#A09678'}/>
-              <div>
-                <h4>Equipagem hospitalar</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida.</p>
-              </div>
-            </li>
+            {service.map(({ icon: Icon, title, content }, idx) => {
+              return (
+                <li key={idx}>
+                  <Icon/>
+                  <div>
+                    <h4>{title}</h4>
+                    <p>{content}</p>
+                  </div>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>
