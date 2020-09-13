@@ -26,7 +26,7 @@ export default function ContactForm() {
     }
   })
   return (
-    <form className={styles.contactForm} onSubmit={handleSubmit}>
+    <form id='contact-form' className={styles.contactForm} onSubmit={handleSubmit}>
       <div className={styles.wrapper}>
         <div className={styles.sectionHead}>
           <h2>Converse conosco</h2>

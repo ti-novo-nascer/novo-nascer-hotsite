@@ -1,6 +1,6 @@
-export default function ExternalLink({ href, children }) {
+export default function ExternalLink({ className, href, children }) {
   return (
-    <a href={href} target='_blank' rel='noopener noreferrer'>
+    <a className={className} href={href} target='_blank' rel='noopener noreferrer'>
       {children}
     </a>
   )
