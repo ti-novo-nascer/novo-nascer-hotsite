@@ -37,7 +37,7 @@
     gap: 16px;
     li {
       display: grid;
-      gap: 4px;
+      gap: 8px;
       a {
         display: grid;
         grid-auto-flow: column;
@@ -52,7 +52,7 @@
           }
         }
         span {
-          font: 14px 'Raleway', sans-serif;
+          font: 16px 'Raleway', sans-serif;
           color: #A09678;
           align-self: center;
         }

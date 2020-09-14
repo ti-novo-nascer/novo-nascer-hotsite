@@ -7,6 +7,13 @@ import styles from '../styles/footer.module.scss'
 
 const baseUrl = 'https://www.novonascer.com.br'
 
+const socialMedias = [
+  { title: 'WhatsApp', link: 'https://wa.me/5581973163700', icon: WhatsApp },
+  { title: 'Instagram', link: 'https://www.instagram.com/novonascer', icon: Instagram },
+  { title: 'Youtube', link: 'https://www.youtube.com/user/novonascer', icon: Youtube },
+  { title: 'Facebook', link: 'https://www.facebook.com/novonascer', icon: Facebook }
+]
+
 const addictionTreatments = [
   { title: 'Tabagismo', path: 'tabagismo' },
   { title: 'Sexo', path: 'sexo' },
@@ -43,30 +50,16 @@ export default function Footer() {
         <div className={styles.list}>
           <h3>Redes Sociais</h3>
           <ul>
-            <li>
-              <ExternalLink href='https://wa.me/5581973163700'>
-                <WhatsApp/>
-                <span>WhatsApp</span>
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink href='https://www.instagram.com/novonascer'>
-                <Instagram/>
-                <span>Instagram</span>
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink href='https://www.youtube.com/user/novonascer'>
-                <Youtube/>
-                <span>Youtube</span>
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink href='https://www.facebook.com/novonascer'>
-                <Facebook/>
-                <span>Facebook</span>
-              </ExternalLink>
-            </li>
+            {socialMedias.map(({ title, link, icon: Icon}) => {
+              return (
+                <li>
+                  <ExternalLink href={link}>
+                    <Icon/>
+                    <span>{title}</span>
+                  </ExternalLink>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <div className={styles.list}>
