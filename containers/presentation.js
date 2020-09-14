@@ -5,7 +5,7 @@ export default function Presentation() {
     <section className={styles.presentation}>
       <div className={styles.wrapper}>
         <div className={styles.sectionHead}>
-          <h1>Bem-vindo à Novo Nascer!</h1>
+          <h2>Bem-vindo à Novo Nascer!</h2>
         </div>
         <div className={styles.sectionBody}>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida. Mauris ut porttitor justo, at fringilla urna. Morbi congue feugiat orci, ut rutrum turpis rhoncus eu. Phasellus ex quam, iaculis nec massa in, pretium interdum ante. Praesent mauris lectus, laoreet nec mollis vitae, semper a ipsum. Mauris at enim tortor. Sed quis purus id augue facilisis commodo blandit eget orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit quis mauris quis elementum. In tincidunt euismod cursus.</p>

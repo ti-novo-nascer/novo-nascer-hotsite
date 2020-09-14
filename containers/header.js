@@ -20,7 +20,7 @@ export default function Header() {
           <ExternalLink href='https://wa.me/5581973163700'>
             <button>
               <TwentyFourHours/>
-              <span>(81) 973-163-700</span>
+              <span>(81) 97316-3700</span>
             </button>
           </ExternalLink>
         </div>
