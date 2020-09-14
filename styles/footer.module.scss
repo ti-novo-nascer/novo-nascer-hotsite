@@ -34,10 +34,8 @@
   }
   ul {
     display: grid;
-    gap: 16px;
+    gap: 12px;
     li {
-      display: grid;
-      gap: 8px;
       a {
         display: grid;
         grid-auto-flow: column;

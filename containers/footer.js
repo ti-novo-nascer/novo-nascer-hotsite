@@ -52,7 +52,7 @@ export default function Footer() {
           <ul>
             {socialMedias.map(({ title, link, icon: Icon}) => {
               return (
-                <li>
+                <li key={title}>
                   <ExternalLink href={link}>
                     <Icon/>
                     <span>{title}</span>
@@ -65,29 +65,29 @@ export default function Footer() {
         <div className={styles.list}>
           <h3>Tratamentos de Depedências</h3>
           <ul>
-            <li>
-              {addictionTreatments.map(({ title, path }) => {
-                return (
-                  <ExternalLink key={path} href={`${baseUrl}/oque-tratamos/${path}`}>
+            {addictionTreatments.map(({ title, path }) => {
+              return (
+                <li key={title}>
+                  <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
                     <span>{title}</span>
                   </ExternalLink>
-                )
-              })}
-            </li>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <div className={styles.list}>
           <h3>Tratamentos de Psiquiatria</h3>
           <ul>
-            <li>
-              {psychiatryTreatments.map(({ title, path }) => {
-                return (
-                  <ExternalLink key={path} href={`${baseUrl}/oque-tratamos/${path}`}>
+            {psychiatryTreatments.map(({ title, path }) => {
+              return (
+                <li key={title}>
+                  <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
                     <span>{title}</span>
                   </ExternalLink>
-                )
-              })}
-            </li>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>
