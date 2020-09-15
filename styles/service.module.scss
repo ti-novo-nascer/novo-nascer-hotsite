@@ -67,3 +67,14 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .wrapper {
+    ul {
+      li {
+        grid-auto-flow: row;
+        justify-items: center;
+      }
+    }
+  }
+}
