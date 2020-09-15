@@ -1,0 +1,54 @@
+.testimonials {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper {
+  max-width: 720px;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+}
+
+.sectionHead {
+  h2 {
+    font: 32px 'DM Serif Text', serif;
+    color: #5076B8;
+    text-align: center;
+  }
+  h3 {
+    font: italic 24px 'DM Serif Text', serif;
+    color: #A09678;
+    text-align: center;
+  }
+}
+
+.sectionBody {
+  a {
+    width: 60px;
+    svg {
+      width: 20px;
+      height: 20px;
+      path {
+        fill: #837753;
+      }
+    }
+  }
+}
+
+.carouselItem {
+  padding: 40px 60px;
+  background: #EAEAEA;
+  border-radius: 8px;
+  p {
+    font: italic 16px/180% 'Raleway', sans-serif;
+    color: #707070;
+    text-align: justify;
+  }
+  span {
+    font: bold 16px/180% 'Raleway', sans-serif;
+    color: #707070;
+    text-align: center;
+  }
+}
