@@ -49,7 +49,7 @@ export default function Statistics() {
                 tickRotation: 0,
                 legend: 'Enfermidade',
                 legendPosition: 'middle',
-                legendOffset: 32
+                legendOffset: 40
             }}
             axisLeft={{
                 tickSize: 5,
