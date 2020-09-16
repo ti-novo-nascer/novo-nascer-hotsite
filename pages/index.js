@@ -3,6 +3,7 @@ import Header from '../containers/header'
 import Presentation from '../containers/presentation'
 import Quote from '../containers/quote'
 import Content from '../containers/content'
+import Statistics from '../containers/statistics'
 import Service from '../containers/service'
 import Testimonials from '../containers/testimonials'
 import ContactForm from '../containers/contact-form'
@@ -23,6 +24,7 @@ export default function Home() {
       <Presentation/>
       <Quote/>
       <Content/>
+      <Statistics/>
       <Service/>
       <Testimonials/>
       <ContactForm/>

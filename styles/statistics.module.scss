@@ -1,0 +1,38 @@
+.statistics {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  gap: 40px;
+}
+
+.sectionHead {
+  h2 {
+    font: 32px 'DM Serif Text', serif;
+    color: #5076B8;
+    text-align: center;
+  }
+  h3 {
+    font: italic 24px 'DM Serif Text', serif;
+    color: #A09678;
+    text-align: center;
+  }
+}
+
+.sectionBody {
+  width: 720px;
+  height: 480px;
+}
+
+@media (max-width: 960px) {
+  .sectionBody {
+    width: calc(100vw - 80px);
+    height: 320px;
+  }
+}
