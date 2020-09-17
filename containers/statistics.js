@@ -29,7 +29,7 @@ export default function Statistics() {
     <section className={styles.statistics}>
       <div className={styles.wrapper}>
         <div className={styles.sectionHead}>
-          <h2>Estatísticas da depressão</h2>
+          <h2>Depressão em números</h2>
           <h3>Das 10 principais causas de incapacitação, 5 são transtornos psiquiátricos</h3>
         </div>
         <div className={styles.sectionBody}>

@@ -11,50 +11,59 @@
   gap: 40px;
 }
 
-.card {
+.sectionHead {
+  h2 {
+    font: 32px 'DM Serif Text', serif;
+    color: #5076B8;
+    text-align: center;
+  }
+  h3 {
+    font: italic 24px 'DM Serif Text', serif;
+    color: #A09678;
+    text-align: center;
+  }
+}
+
+.sectionBody {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "img txt"
+      "coll coll";
   gap: 40px;
   picture {
+    grid-area: img;
     img {
       width: 100%;
     }
   }
-  div {
-    width: 100%;
-    h2 {
-      margin-bottom: 24px;
-      font: 32px 'DM Serif Text', serif;
-      color: #5076B8;
-      text-align: center;
-    }
-    p {
-      font: 16px/180% 'Raleway', sans-serif;
-      color: #A09678;
-      text-align: justify;
-    }
-    ul {
+  p {
+    grid-area: txt;
+    font: 16px/180% 'Raleway', sans-serif;
+    color: #A09678;
+    text-align: justify;
+  }
+  ul {
+    grid-area: coll;
+    display: grid;
+    justify-items: start;
+    gap: 16px;
+    li {
       list-style: circle inside;
-      li {
-        font: 16px/180% 'Raleway', sans-serif;
-        color: #A09678;
-        text-align: justify;
-      }
+      font: bold 16px/180% 'Raleway', sans-serif;
+      color: #707070;
+      text-align: justify;
     }
   }
 }
 
 @media (max-width: 768px) {
-  .card {
+  .sectionBody {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "txt"
-      "img";
-    div {
-      grid-area: txt;
-    }
-    picture {
-      grid-area: img;
-    }
+        "img"
+        "txt"
+        "coll";
   }
 }
