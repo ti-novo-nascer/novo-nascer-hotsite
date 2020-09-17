@@ -3,6 +3,7 @@ import Head from 'next/head'
 function Seo({ title, description, url, image }) {
   return (
     <Head>
+      <meta name='author' content='Lucas Alves Costa'/>
       <title>{title}</title>
       <meta name='description' content={description}/>
       <meta property='og:title' content={title}/>
