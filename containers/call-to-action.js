@@ -7,7 +7,6 @@ export default function CallToAction() {
       <div className={styles.wrapper}>
         <div className={styles.sectionHead}>
           <h2>Está precisando de ajuda?</h2>
-          <h3>Estamos preparados para receber quem quer que esteja precisando de ajuda</h3>
         </div>
         <div className={styles.sectionBody}>
           <ExternalLink href='https://wa.me/5581973163700'>

@@ -1,26 +1,6 @@
 .presentation {
   width: 100%;
   padding: 40px;
-  position: relative;
-  background: #EFECE5;
-  &::before {
-    content: '';
-    width: 100%;
-    height: 16px;
-    position: absolute;
-    top: -8px;
-    left: 0;
-    background: url('../public/images/beige-section-border-top.png')
-  }
-  &::after {
-    content: '';
-    width: 100%;
-    height: 16px;
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    background: url('../public/images/beige-section-border-bottom.png')
-  }
 }
 
 .wrapper {
@@ -35,6 +15,11 @@
   h2 {
     font: 36px 'DM Serif Text', serif;
     color: #5076B8;
+    text-align: center;
+  }
+  h3 {
+    font: italic 24px 'DM Serif Text', serif;
+    color: #A09678;
     text-align: center;
   }
 }
