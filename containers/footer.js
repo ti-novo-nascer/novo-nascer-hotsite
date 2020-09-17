@@ -1,4 +1,5 @@
 import ExternalLink from '../components/external-link'
+import Logo from '../components/logo'
 import WhatsApp from '../components/whatsapp'
 import Instagram from '../components/instagram'
 import Youtube from '../components/youtube'
@@ -47,6 +48,12 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
+        <div className={styles.brand}>
+          <ExternalLink href='https://g.page/r/CcVktdl66f64EBA'>
+            <Logo/>
+            <span>R. Cristine Albert, 752,<br/>Camaragibe-PE</span>
+          </ExternalLink>
+        </div>
         <div className={styles.list}>
           <h3>Redes Sociais</h3>
           <ul>

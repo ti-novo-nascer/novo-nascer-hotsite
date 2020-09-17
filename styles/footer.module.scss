@@ -10,7 +10,7 @@
     position: absolute;
     top: -8px;
     left: 0;
-    background-image: url('../public/images/beige-section-border-top.png')
+    background: url('../public/images/beige-section-border-top.png')
   }
 }
 
@@ -19,9 +19,41 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 64px;
+}
+
+.brand {
+  display: grid;
+  a {
+    text-decoration: none;
+    display: grid;
+    align-content: start;
+    gap: 16px;
+    svg {
+      width: 200px;
+      path {
+        fill: #A09678;
+      }
+    }
+    span {
+      display: block;
+      font: 16px 'Raleway', sans-serif;
+      color: #A09678;
+      align-self: center;
+    }
+    &:hover {
+      svg {
+        width: 200px;
+        path {
+          fill: #837753;
+        }
+      }
+      span {
+        color: #837753;
+      }
+    }
+  }
 }
 
 .list {
@@ -56,24 +88,40 @@
           align-self: center;
         }
       }
-      a:hover {
-        svg {
-          path {
-            fill: #837753
+      &:hover {
+        a {
+          svg {
+            path {
+              fill: #837753;
+            }
           }
-        }
-        span {
-          color: #837753;
+          span {
+            color: #837753;
+          }
         }
       }
     }
   }
 }
 
+@media (max-width: 960px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .wrapper {
-    grid-auto-flow: row;
     grid-template-columns: 1fr;
+  }
+
+  .brand {
+    justify-content: center;
+    a {
+      span {
+        text-align: center;
+      }
+    }
   }
 
   .list {
