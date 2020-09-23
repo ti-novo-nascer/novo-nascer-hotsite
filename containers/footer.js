@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade'
 import ExternalLink from '../components/external-link'
 import Logo from '../components/logo'
 import WhatsApp from '../components/whatsapp'
@@ -47,57 +48,59 @@ const psychiatryTreatments = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.wrapper}>
-        <div className={styles.brand}>
-          <ExternalLink href='https://g.page/r/CcVktdl66f64EBA'>
-            <Logo/>
-            <span>R. Cristine Albert, 752,<br/>Camaragibe-PE</span>
-          </ExternalLink>
+      <Fade duration={4000}>
+        <div className={styles.wrapper}>
+          <div className={styles.brand}>
+            <ExternalLink href='https://g.page/r/CcVktdl66f64EBA'>
+              <Logo/>
+              <span>R. Cristine Albert, 752,<br/>Camaragibe-PE</span>
+            </ExternalLink>
+          </div>
+          <div className={styles.list}>
+            <h3>Redes Sociais</h3>
+            <ul>
+              {socialMedias.map(({ title, link, icon: Icon}) => {
+                return (
+                  <li key={title}>
+                    <ExternalLink href={link}>
+                      <Icon/>
+                      <span>{title}</span>
+                    </ExternalLink>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className={styles.list}>
+            <h3>Tratamentos de Depedências</h3>
+            <ul>
+              {addictionTreatments.map(({ title, path }) => {
+                return (
+                  <li key={title}>
+                    <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
+                      <span>{title}</span>
+                    </ExternalLink>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className={styles.list}>
+            <h3>Tratamentos de Psiquiatria</h3>
+            <ul>
+              {psychiatryTreatments.map(({ title, path }) => {
+                return (
+                  <li key={title}>
+                    <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
+                      <span>{title}</span>
+                    </ExternalLink>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </div>
-        <div className={styles.list}>
-          <h3>Redes Sociais</h3>
-          <ul>
-            {socialMedias.map(({ title, link, icon: Icon}) => {
-              return (
-                <li key={title}>
-                  <ExternalLink href={link}>
-                    <Icon/>
-                    <span>{title}</span>
-                  </ExternalLink>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-        <div className={styles.list}>
-          <h3>Tratamentos de Depedências</h3>
-          <ul>
-            {addictionTreatments.map(({ title, path }) => {
-              return (
-                <li key={title}>
-                  <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
-                    <span>{title}</span>
-                  </ExternalLink>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-        <div className={styles.list}>
-          <h3>Tratamentos de Psiquiatria</h3>
-          <ul>
-            {psychiatryTreatments.map(({ title, path }) => {
-              return (
-                <li key={title}>
-                  <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
-                    <span>{title}</span>
-                  </ExternalLink>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      </div>
+      </Fade>
     </footer>
   )
 }

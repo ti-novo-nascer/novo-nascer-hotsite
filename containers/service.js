@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade'
 import MedicalHistory from '../components/medical-history'
 import Female from '../components/female'
 import Telemarketer from '../components/telemarketer'
@@ -23,28 +24,30 @@ const service = [
 
 export default function Service() {
   return (
-    <section className={styles.service}>
-      <div className={styles.wrapper}>
-        <div className={styles.sectionHead}>
-          <h2>O que oferecemos</h2>
-          <h3>Não medimos esforços para garantir uma recuperação efetiva e estadia segura</h3>
+    <Fade bottom duration={2000}>
+      <section className={styles.service}>
+        <div className={styles.wrapper}>
+          <div className={styles.sectionHead}>
+            <h2>O que oferecemos</h2>
+            <h3>Não medimos esforços para garantir uma recuperação efetiva e estadia segura</h3>
+          </div>
+          <div className={styles.sectionBody}>
+            <ul>
+              {service.map(({ icon: Icon, title, content }, idx) => {
+                return (
+                  <li key={idx}>
+                    <Icon/>
+                    <div>
+                      <h4>{title}</h4>
+                      <p>{content}</p>
+                    </div>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </div>
-        <div className={styles.sectionBody}>
-          <ul>
-            {service.map(({ icon: Icon, title, content }, idx) => {
-              return (
-                <li key={idx}>
-                  <Icon/>
-                  <div>
-                    <h4>{title}</h4>
-                    <p>{content}</p>
-                  </div>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
+    </Fade>
   )
 }
