@@ -24,8 +24,7 @@
   left: 0;
   display: grid;
   justify-content: center;
-  align-content: center;
-  gap: 120px;
+  align-content: space-between;
   z-index: 2;
 }
 
@@ -76,8 +75,20 @@
 }
 
 .title {
+  display: grid;
+  justify-items: center;
   h1 {
     font: 36px 'DM Serif Text', serif;
+    color: #FFFFFF;
+    text-align: center;
+  }
+}
+
+.credits {
+  display: grid;
+  justify-items: center;
+  span {
+    font: 16px 'Raleway', sans-serif;
     color: #FFFFFF;
     text-align: center;
   }
@@ -123,6 +134,12 @@
   .title {
     h1 {
       font-size: 28px;
+    }
+  }
+
+  .credits {
+    span {
+      font-size: 14px;
     }
   }
 }

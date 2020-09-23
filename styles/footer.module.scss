@@ -19,8 +19,23 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
+  gap: 40px;
+}
+
+.forwarding {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 64px;
+}
+
+.credits {
+  display: grid;
+  justify-items: center;
+  span {
+    font: 16px 'Raleway', sans-serif;
+    color: #A09678;
+    text-align: center;
+  }
 }
 
 .brand {
@@ -106,14 +121,20 @@
 }
 
 @media (max-width: 960px) {
-  .wrapper {
+  .forwarding {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .wrapper {
+  .forwarding {
     grid-template-columns: 1fr;
+  }
+
+  .credits {
+    span {
+      font-size: 14px;
+    }
   }
 
   .brand {

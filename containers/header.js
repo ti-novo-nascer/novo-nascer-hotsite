@@ -29,6 +29,9 @@ export default function Header() {
           <div className={styles.title}>
             <h1>Conheça o Tratamento para a Depressão da Novo Nascer</h1>
           </div>
+          <div className={styles.credits}>
+            <span>Direção Técnica: Psiquiatra Dr.<sup>a</sup> Daniela Morais | CRM: 16150 / RQE: 1795</span>
+          </div>
         </div>
       </Fade>
     </header>

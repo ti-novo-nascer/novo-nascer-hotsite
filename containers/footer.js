@@ -50,54 +50,59 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Fade duration={4000}>
         <div className={styles.wrapper}>
-          <div className={styles.brand}>
-            <ExternalLink href='https://g.page/r/CcVktdl66f64EBA'>
-              <Logo/>
-              <span>R. Cristine Albert, 752,<br/>Camaragibe-PE</span>
-            </ExternalLink>
+          <div className={styles.forwarding}>
+            <div className={styles.brand}>
+              <ExternalLink href='https://g.page/r/CcVktdl66f64EBA'>
+                <Logo/>
+                <span>R. Cristine Albert, 752,<br/>Camaragibe-PE</span>
+              </ExternalLink>
+            </div>
+            <div className={styles.list}>
+              <h3>Redes Sociais</h3>
+              <ul>
+                {socialMedias.map(({ title, link, icon: Icon}) => {
+                  return (
+                    <li key={title}>
+                      <ExternalLink href={link}>
+                        <Icon/>
+                        <span>{title}</span>
+                      </ExternalLink>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            <div className={styles.list}>
+              <h3>Tratamentos de Depedências</h3>
+              <ul>
+                {addictionTreatments.map(({ title, path }) => {
+                  return (
+                    <li key={title}>
+                      <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
+                        <span>{title}</span>
+                      </ExternalLink>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            <div className={styles.list}>
+              <h3>Tratamentos de Psiquiatria</h3>
+              <ul>
+                {psychiatryTreatments.map(({ title, path }) => {
+                  return (
+                    <li key={title}>
+                      <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
+                        <span>{title}</span>
+                      </ExternalLink>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
-          <div className={styles.list}>
-            <h3>Redes Sociais</h3>
-            <ul>
-              {socialMedias.map(({ title, link, icon: Icon}) => {
-                return (
-                  <li key={title}>
-                    <ExternalLink href={link}>
-                      <Icon/>
-                      <span>{title}</span>
-                    </ExternalLink>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-          <div className={styles.list}>
-            <h3>Tratamentos de Depedências</h3>
-            <ul>
-              {addictionTreatments.map(({ title, path }) => {
-                return (
-                  <li key={title}>
-                    <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
-                      <span>{title}</span>
-                    </ExternalLink>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-          <div className={styles.list}>
-            <h3>Tratamentos de Psiquiatria</h3>
-            <ul>
-              {psychiatryTreatments.map(({ title, path }) => {
-                return (
-                  <li key={title}>
-                    <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
-                      <span>{title}</span>
-                    </ExternalLink>
-                  </li>
-                )
-              })}
-            </ul>
+          <div className={styles.credits}>
+            <span>Direção Técnica: Psiquiatra Dr.<sup>a</sup> Daniela Morais | CRM: 16150 / RQE: 1795</span>
           </div>
         </div>
       </Fade>
