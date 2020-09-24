@@ -3,6 +3,7 @@ import Header from '../containers/header'
 import Presentation from '../containers/presentation'
 import CallToAction from '../containers/call-to-action'
 import Content from '../containers/content'
+import Motivational from '../containers/motivational'
 import Statistics from '../containers/statistics'
 import Service from '../containers/service'
 import Testimonials from '../containers/testimonials'
@@ -24,6 +25,7 @@ export default function Home() {
       <Presentation/>
       <CallToAction/>
       <Content/>
+      <Motivational/>
       <Statistics/>
       <Service/>
       <Testimonials/>
