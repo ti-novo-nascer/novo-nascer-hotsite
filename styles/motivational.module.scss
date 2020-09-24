@@ -10,7 +10,7 @@
     position: absolute;
     top: -8px;
     left: 0;
-    background: url('../public/images/blue-section-border-top.png')
+    background: url('../public/images/blue-section-border-top.webp')
   }
   &::after {
     content: '';
@@ -19,7 +19,7 @@
     position: absolute;
     bottom: -8px;
     left: 0;
-    background: url('../public/images/blue-section-border-bottom.png')
+    background: url('../public/images/blue-section-border-bottom.webp')
   }
 }
 

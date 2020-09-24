@@ -11,10 +11,7 @@ export default function Content() {
             <h3>Aprenda a reconhecer os sintomas da depressão</h3>
           </div>
           <div className={styles.sectionBody}>
-            <picture>
-              <source srcSet='images/paciente-em-acompanhamento.webp' type='image/webp'/>
-              <img src='images/paciente-em-acompanhamento.jpg' alt='Acompanhamento de paciente' loading='lazy'/>
-            </picture>
+            <img src='images/paciente-em-acompanhamento.webp' alt='Acompanhamento de paciente' loading='lazy'/>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida. Mauris ut porttitor justo, at fringilla urna. Morbi congue feugiat orci, ut rutrum turpis rhoncus eu. Phasellus ex quam, iaculis nec massa in, pretium interdum ante. Praesent mauris lectus, laoreet nec mollis vitae, semper a ipsum. Mauris at enim tortor. Sed quis purus id augue facilisis commodo blandit eget orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit quis mauris quis elementum. In tincidunt euismod cursus.</p>
             <ul>
               <li>Humor triste, ansioso ou “vazio” persistente</li>

@@ -31,11 +31,9 @@
       'img txt'
       'coll coll';
   gap: 40px;
-  picture {
+  img {
+    width: 100%;
     grid-area: img;
-    img {
-      width: 100%;
-    }
   }
   p {
     grid-area: txt;

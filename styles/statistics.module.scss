@@ -26,13 +26,15 @@
 }
 
 .sectionBody {
-  width: 720px;
-  height: 480px;
+  img {
+    width: 720px;
+  }
 }
 
 @media (max-width: 960px) {
   .sectionBody {
-    width: calc(100vw - 80px);
-    height: 320px;
+    img {
+      width: calc(100vw - 80px);
+    }
   }
 }
