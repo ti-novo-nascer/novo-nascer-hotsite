@@ -13,7 +13,7 @@ export default function CallToAction() {
           <div className={styles.sectionBody}>
             <ExternalLink href='https://wa.me/5581973163700'>
               <button>
-                <span>Vamos conversar</span>
+                <span>Converse conosco agora!</span>
               </button>
             </ExternalLink>
           </div>
