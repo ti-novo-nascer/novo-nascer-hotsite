@@ -9,6 +9,8 @@ import styles from '../styles/footer.module.scss'
 
 const baseUrl = 'https://www.novonascer.com.br'
 
+const curYear = new Date().getFullYear()
+
 const socialMedias = [
   { title: 'WhatsApp', link: 'https://wa.me/5581973163700', icon: WhatsApp },
   { title: 'Instagram', link: 'https://www.instagram.com/novonascer', icon: Instagram },
@@ -103,6 +105,7 @@ export default function Footer() {
           </div>
           <div className={styles.credits}>
             <span>Direção Técnica: Psiquiatra Dr.<sup>a</sup> Daniela Morais | CRM: 16150 / RQE: 1795</span>
+            <span>Novo Nascer &copy; Copyright {curYear} | Todos os direitos reservados</span>
           </div>
         </div>
       </Fade>
