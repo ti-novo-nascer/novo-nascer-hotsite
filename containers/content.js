@@ -4,7 +4,7 @@ import styles from '../styles/content.module.scss'
 export default function Content() {
   return (
     <Fade bottom duration={2000}>
-      <section className={styles.content}>
+      <div className={styles.content}>
         <div className={styles.wrapper}>
           <div className={styles.sectionHead}>
             <h2>Reconhecendo a depressão</h2>
@@ -25,7 +25,7 @@ export default function Content() {
             </ul>
           </div>
         </div>
-      </section>
+      </div>
     </Fade>
   )
 }

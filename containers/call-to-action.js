@@ -4,7 +4,7 @@ import styles from '../styles/call-to-action.module.scss'
 
 export default function CallToAction() {
   return (
-    <section className={styles.callToAction}>
+    <div className={styles.callToAction}>
       <Fade duration={4000}>
         <div className={styles.wrapper}>
           <div className={styles.sectionHead}>
@@ -19,6 +19,6 @@ export default function CallToAction() {
           </div>
         </div>
       </Fade>
-    </section>
+    </div>
   )
 }

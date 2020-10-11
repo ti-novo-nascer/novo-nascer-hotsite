@@ -4,7 +4,7 @@ import styles from '../styles/presentation.module.scss'
 export default function Presentation() {
   return (
     <Fade bottom duration={2000}>
-      <section className={styles.presentation}>
+      <div className={styles.presentation}>
         <div className={styles.wrapper}>
           <div className={styles.sectionHead}>
             <h2>Bem-vindo à Novo Nascer!</h2>
@@ -15,7 +15,7 @@ export default function Presentation() {
             <p>In sit amet magna ac purus luctus lacinia. Donec elementum volutpat eros a aliquet. Curabitur in tellus justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam at aliquam augue. Nam magna magna, bibendum at lacus ac, blandit egestas erat. Nulla tempor, augue et pretium molestie, leo leo congue nulla, sed feugiat massa turpis non nisl.</p>
           </div>
         </div>
-      </section>
+      </div>
     </Fade>
   )
 }

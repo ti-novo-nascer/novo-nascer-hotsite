@@ -17,7 +17,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <Fade bottom duration={2000}>
-      <section className={styles.testimonials}>
+      <div className={styles.testimonials}>
         <div className={styles.wrapper}>
           <div className={styles.sectionHead}>
             <h2>Depoimentos</h2>
@@ -44,7 +44,7 @@ export default function Testimonials() {
             </ExternalLink>
           </div>
         </div>
-      </section>
+      </div>
     </Fade>
   )
 }

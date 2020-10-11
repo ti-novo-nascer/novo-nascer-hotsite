@@ -25,7 +25,7 @@ const service = [
 export default function Service() {
   return (
     <Fade bottom duration={2000}>
-      <section className={styles.service}>
+      <div className={styles.service}>
         <div className={styles.wrapper}>
           <div className={styles.sectionHead}>
             <h2>O que oferecemos</h2>
@@ -47,7 +47,7 @@ export default function Service() {
             </ul>
           </div>
         </div>
-      </section>
+      </div>
     </Fade>
   )
 }

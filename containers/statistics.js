@@ -4,7 +4,7 @@ import styles from '../styles/statistics.module.scss'
 export default function Statistics() {
   return (
     <Fade bottom duration={2000}>
-      <section className={styles.statistics}>
+      <div className={styles.statistics}>
         <div className={styles.wrapper}>
           <div className={styles.sectionHead}>
             <h2>Depressão em números</h2>
@@ -14,7 +14,7 @@ export default function Statistics() {
             <img src='images/depressao-estatistica.webp' alt='Dados sobre a depressão' loading='lazy'/>
           </div>
         </div>
-      </section>
+      </div>
     </Fade>
   )
 }

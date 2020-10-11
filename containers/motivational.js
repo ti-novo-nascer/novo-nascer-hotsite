@@ -4,7 +4,7 @@ import styles from '../styles/motivational.module.scss'
 
 export default function Motivational() {
   return (
-    <section className={styles.motivational}>
+    <div className={styles.motivational}>
       <Fade duration={4000}>
         <div className={styles.wrapper}>
           <div className={styles.sectionHead}>
@@ -19,6 +19,6 @@ export default function Motivational() {
           </div>
         </div>
       </Fade>
-    </section>
+    </div>
   )
 }
