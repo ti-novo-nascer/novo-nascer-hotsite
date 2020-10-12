@@ -77,8 +77,24 @@
 .title {
   display: grid;
   justify-items: center;
+  gap: 16px;
   h1 {
+    position: relative;
     font: 36px 'DM Serif Text', serif;
+    color: #FFFFFF;
+    text-align: center;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px solid #FFFFFF;
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+    }
+  }
+  h2 {
+    font: italic 28px 'DM Serif Text', serif;
     color: #FFFFFF;
     text-align: center;
   }
