@@ -25,11 +25,10 @@
 }
 
 .sectionBody {
-  display: grid;
-  gap: 20px;
   p {
     font: 16px/180% 'Poppins', sans-serif;
-    color: #A09678;
+    color: #707070;
+    text-indent: 40px;
     text-align: justify;
   }
 }
