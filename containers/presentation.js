@@ -11,8 +11,8 @@ export default function Presentation() {
             <h3>Estamos preparados para cuidar de você em nossas instalações</h3>
           </div>
           <div className={styles.sectionBody}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dui id fermentum gravida. Mauris ut porttitor justo, at fringilla urna. Morbi congue feugiat orci, ut rutrum turpis rhoncus eu. Phasellus ex quam, iaculis nec massa in, pretium interdum ante. Praesent mauris lectus, laoreet nec mollis vitae, semper a ipsum. Mauris at enim tortor. Sed quis purus id augue facilisis commodo blandit eget orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit quis mauris quis elementum. In tincidunt euismod cursus.</p>
-            <p>In sit amet magna ac purus luctus lacinia. Donec elementum volutpat eros a aliquet. Curabitur in tellus justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam at aliquam augue. Nam magna magna, bibendum at lacus ac, blandit egestas erat. Nulla tempor, augue et pretium molestie, leo leo congue nulla, sed feugiat massa turpis non nisl.</p>
+            <p>Há momentos da vida que são cruciais, que nos pedem uma nova direção. Você sabe que precisa mudar, encontrar equilíbrio, sentir-se finalmente em paz. Viver de forma completa e ter um senso de propósito para que tudo faça sentido torna-se essencial.</p>
+            <p>A Novo Nascer é o lugar para pessoas que precisam fazer essa mudança da melhor forma possível. Oferecemos cuidados multiprofissionais, orientação precisa e um caloroso acolhimento, caminhando com você nessa jornada de transformações necessárias.</p>
           </div>
         </div>
       </div>
