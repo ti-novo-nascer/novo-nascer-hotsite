@@ -1,11 +1,16 @@
 import classNames from 'classnames'
 import Fade from 'react-reveal/Fade'
-import ExternalLink from '../components/external-link'
-import TwentyFourHours from '../components/24-hours'
-import SendEmail from '../components/send-email'
-import styles from '../styles/fixed-header.module.scss'
+import ExternalLink from '../../components/external-link'
+import TwentyFourHours from '../../components/24-hours'
+import SendEmail from '../../components/send-email'
+import styles from './fixed-header.module.scss'
 
-export default function FixedHeader({ className, show }) {
+export interface FixedHeaderProps {
+  className: string
+  show: boolean
+}
+
+export default function FixedHeader({ className, show }: FixedHeaderProps) {
   return (
     <Fade top duration={400}>
       <header
@@ -26,7 +31,7 @@ export default function FixedHeader({ className, show }) {
               </button>
             </a>
             <ExternalLink href='https://www.novonascer.com.br/'>
-              <img src='images/novo-nascer-simbolo-azul.svg' alt='Logo da Clínica Hospitalar Novo Nascer'/>
+              <img src='/novo-nascer-simbolo-azul.svg' alt='Logo da Clínica Hospitalar Novo Nascer'/>
             </ExternalLink>
             <ExternalLink href='https://wa.me/5581973163700'>
               <button>

@@ -17,7 +17,7 @@ export default function Header() {
               </button>
             </a>
             <ExternalLink href='https://www.novonascer.com.br/'>
-              <img src='images/novo-nascer-logo.svg' alt='Logo da Clínica Hospitalar Novo Nascer'/>
+              <img src='/novo-nascer-logo.svg' alt='Logo da Clínica Hospitalar Novo Nascer'/>
             </ExternalLink>
             <ExternalLink href='https://wa.me/5581973163700'>
               <button>
