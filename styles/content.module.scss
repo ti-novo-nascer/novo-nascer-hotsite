@@ -25,29 +25,21 @@
 }
 
 .sectionBody {
-  display: grid;
-  gap: 20px;
-  img {
-    width: 720px;
-    justify-self: center;
+  p {
+    font: 16px/180% 'Poppins', sans-serif;
+    color: #707070;
+    text-indent: 40px;
+    text-align: justify;
   }
-  .text {
-    p {
-      font: 16px/180% 'Poppins', sans-serif;
-      color: #707070;
+  ul {
+    display: grid;
+    justify-items: start;
+    gap: 16px;
+    li {
       text-indent: 40px;
-      text-align: justify;
-    }
-    ul {
-      display: grid;
-      justify-items: start;
-      gap: 16px;
-      li {
-        text-indent: 40px;
-        list-style: circle inside;
-        font: bold 16px/180% 'Poppins', sans-serif;
-        color: #707070;
-      }
+      list-style: circle inside;
+      font: bold 16px/180% 'Poppins', sans-serif;
+      color: #707070;
     }
   }
 }
