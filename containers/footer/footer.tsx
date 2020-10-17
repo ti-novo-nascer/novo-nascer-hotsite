@@ -1,11 +1,11 @@
 import Fade from 'react-reveal/Fade'
-import ExternalLink from '../components/external-link'
-import Logo from '../components/logo'
-import WhatsApp from '../components/whatsapp'
-import Instagram from '../components/instagram'
-import Youtube from '../components/youtube'
-import Facebook from '../components/facebook'
-import styles from '../styles/footer.module.scss'
+import ExternalLink from '../../components/external-link'
+import Logo from '../../components/logo'
+import WhatsApp from '../../components/whatsapp'
+import Instagram from '../../components/instagram'
+import Youtube from '../../components/youtube'
+import Facebook from '../../components/facebook'
+import styles from './footer.module.scss'
 
 const baseUrl = 'https://www.novonascer.com.br'
 
