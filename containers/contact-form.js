@@ -22,8 +22,16 @@ export default function ContactForm() {
       healthPlan: yup.string().required('O plano de saúde é obrigatório'),
       details: yup.string().required('Os detalhes são obrigatórios')
     }),
-    onSubmit: (values) => {
-      console.log(values)
+    onSubmit: async (values) => {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values)
+      })
+      const text = await res.text()
+      console.log('Resposta do envio do email: ', text)
     }
   })
   return (
