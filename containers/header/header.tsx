@@ -1,8 +1,8 @@
 import Fade from 'react-reveal/Fade'
-import ExternalLink from '../components/external-link'
-import TwentyFourHours from '../components/24-hours'
-import SendEmail from '../components/send-email'
-import styles from '../styles/header.module.scss'
+import ExternalLink from '../../components/external-link'
+import TwentyFourHours from '../../components/24-hours'
+import SendEmail from '../../components/send-email'
+import styles from './header.module.scss'
 
 export default function Header() {
   return (
