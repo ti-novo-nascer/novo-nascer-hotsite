@@ -28,11 +28,11 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  background: url('../public/images/passaro.svg') no-repeat right 0 bottom 0;
+  background: url('/passaro.svg') no-repeat right 0 bottom 0;
   gap: 40px;
 }
 
-.sectionHead {
+.head {
   h2 {
     font: 32px 'DM Serif Text', serif;
     color: #837753;
@@ -40,7 +40,7 @@
   }
 }
 
-.sectionBody {
+.body {
   display: grid;
   justify-content: center;
   a {
@@ -62,7 +62,7 @@
 }
 
 @media (max-width: 768px) {
-  .sectionBody {
+  .body {
     a {
       button {
         padding: 12px 18px;
