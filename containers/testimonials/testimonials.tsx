@@ -1,9 +1,9 @@
 import Fade from 'react-reveal/Fade'
 import Carousel from 'react-bootstrap/Carousel'
-import ExternalLink from '../components/external-link'
-import Prev from '../components/prev'
-import Next from '../components/next'
-import styles from '../styles/testimonials.module.scss'
+import ExternalLink from '../../components/external-link'
+import Prev from '../../components/prev'
+import Next from '../../components/next'
+import styles from './testimonials.module.scss'
 
 const testimonials = [
   {
@@ -37,25 +37,22 @@ export default function Testimonials() {
     <Fade bottom duration={2000}>
       <div className={styles.testimonials}>
         <div className={styles.wrapper}>
-          <div className={styles.sectionHead}>
+          <div className={styles.head}>
             <h2>Depoimentos</h2>
             <h3>A vivência de nossos clientes e familiares</h3>
           </div>
-          <div className={styles.sectionBody}>
+          <div className={styles.body}>
             <Carousel
-              className={styles.sectionBody}
               prevIcon={<Prev/>}
               nextIcon={<Next/>}
               indicators={false}
             >
-              {testimonials.map(({ author, text }, idx) => {
-                return (
-                  <Carousel.Item key={idx} className={styles.carouselItem}>
-                    <p>{text}</p>
-                    <span>{author}</span>
-                  </Carousel.Item>
-                )
-              })}
+              {testimonials.map(({ author, text }, idx) => (
+                <Carousel.Item key={idx} className={styles.carouselItem}>
+                  <p>{text}</p>
+                  <span>{author}</span>
+                </Carousel.Item>
+              ))}
             </Carousel>
             <ExternalLink href='https://www.novonascer.com.br/lista-de-depoimentos'>
               <button>Ver Mais</button>
