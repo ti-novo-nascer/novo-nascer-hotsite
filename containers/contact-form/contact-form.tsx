@@ -2,7 +2,7 @@ import Fade from 'react-reveal/Fade'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import MaskedInput from 'react-text-mask'
-import styles from '../styles/contact-form.module.scss'
+import styles from './contact-form.module.scss'
 
 export default function ContactForm() {
   const { getFieldProps, touched, errors, isValid, handleSubmit } = useFormik({
@@ -38,11 +38,11 @@ export default function ContactForm() {
     <Fade bottom duration={2000}>
       <form id='contact-form' className={styles.contactForm} onSubmit={handleSubmit}>
         <div className={styles.wrapper}>
-          <div className={styles.sectionHead}>
+          <div className={styles.head}>
             <h2>Converse conosco</h2>
             <h3>Estamos preparados para lhe atender da melhor forma possível</h3>
           </div>
-          <div className={styles.sectionBody}>
+          <div className={styles.body}>
             <div>
               <label htmlFor='name-input'>Nome</label>
               <input id='name-input' type='text' {...getFieldProps('name')}/>
@@ -76,7 +76,7 @@ export default function ContactForm() {
             </div>
             <div>
               <label htmlFor='details-textarea'>Como podemos ajudar?</label>
-              <textarea id='details-textarea' rows='10' cols='50' {...getFieldProps('details')}/>
+              <textarea id='details-textarea' rows={10} cols={50} {...getFieldProps('details')}/>
               {touched.details && errors.details ? <small>{errors.details}</small> : null}
             </div>
             <button type='submit' disabled={!isValid}>Enviar</button>
