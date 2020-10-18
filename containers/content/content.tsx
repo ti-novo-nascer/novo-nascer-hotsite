@@ -1,16 +1,16 @@
 import Fade from 'react-reveal/Fade'
-import styles from '../styles/content.module.scss'
+import styles from './content.module.scss'
 
 export default function Content() {
   return (
     <Fade bottom duration={2000}>
       <div className={styles.content}>
         <div className={styles.wrapper}>
-          <div className={styles.sectionHead}>
+          <div className={styles.head}>
             <h2>Reconhecendo a depressão</h2>
             <h3>Aprenda a reconhecer os sintomas da depressão</h3>
           </div>
-          <div className={styles.sectionBody}>
+          <div className={styles.body}>
             <p>O termo depressão vem sendo utilizado para uma grande variedade de questões, como tristeza, reações a certas circunstâncias da vida e até a outros distúrbios emocionais. A depressão de fato, porém, é um transtorno afetivo que envolve alterações nos neurotransmissores cerebrais e se apresenta com rebaixamento do humor, redução de energia e prejuízo de atividades em geral.</p>
             <p>Depressão e tristeza têm características distintas. A tristeza é um sentimento universal, natural e fisiológico que expressa dor ou sofrimento e, ao contrário da depressão, não compromete significativamente outras funções mentais nem o funcionamento global do indivíduo.</p>
             <p>Como qualquer transtorno emocional, a depressão pode afetar qualquer pessoa, independentemente de sua conta bancária, situação de poder ou fama. Quantas pessoas aparentam viver em um estado de felicidade na superfície, quando na verdade sentem constantemente sofrimento profundo, vazio, solidão?</p>
