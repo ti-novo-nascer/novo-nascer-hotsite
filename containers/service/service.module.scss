@@ -11,7 +11,7 @@
   gap: 40px;
 }
 
-.sectionHead {
+.head {
   h2 {
     font: 32px 'DM Serif Text', serif;
     color: #5076B8;
@@ -24,7 +24,7 @@
   }
 }
 
-.sectionBody {
+.body {
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;

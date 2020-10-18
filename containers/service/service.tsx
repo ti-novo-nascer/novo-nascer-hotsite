@@ -1,14 +1,14 @@
 import Fade from 'react-reveal/Fade'
-import MedicalHistory from '../components/medical-history'
-import Female from '../components/female'
-import Telemarketer from '../components/telemarketer'
-import Family from '../components/family'
-import Breakfast from '../components/breakfast'
-import AirConditioner from '../components/air-conditioner'
-import Community from '../components/community'
-import Medicine from '../components/medicine'
-import Ambulance from '../components/ambulance'
-import styles from '../styles/service.module.scss'
+import MedicalHistory from '../../components/medical-history'
+import Female from '../../components/female'
+import Telemarketer from '../../components/telemarketer'
+import Family from '../../components/family'
+import Breakfast from '../../components/breakfast'
+import AirConditioner from '../../components/air-conditioner'
+import Community from '../../components/community'
+import Medicine from '../../components/medicine'
+import Ambulance from '../../components/ambulance'
+import styles from './service.module.scss'
 
 const service = [
   { icon: MedicalHistory, title: 'Cuidados intensivos de enfermagem', content: 'Liderados e orientados por nossa equipe médica clínica e psiquiátrica, os enfermeiros garantem o prosseguir das terapêuticas aplicadas diariamente, 24h por dia' },
@@ -27,23 +27,21 @@ export default function Service() {
     <Fade bottom duration={2000}>
       <div className={styles.service}>
         <div className={styles.wrapper}>
-          <div className={styles.sectionHead}>
+          <div className={styles.head}>
             <h2>O que oferecemos</h2>
             <h3>Não medimos esforços para garantir uma recuperação efetiva e estadia segura</h3>
           </div>
-          <div className={styles.sectionBody}>
+          <div className={styles.body}>
             <ul>
-              {service.map(({ icon: Icon, title, content }, idx) => {
-                return (
-                  <li key={idx}>
-                    <Icon/>
-                    <div>
-                      <h4>{title}</h4>
-                      <p>{content}</p>
-                    </div>
-                  </li>
-                )
-              })}
+              {service.map(({ icon: Icon, title, content }, idx) => (
+                <li key={idx}>
+                  <Icon/>
+                  <div>
+                    <h4>{title}</h4>
+                    <p>{content}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
