@@ -13,19 +13,7 @@ import ContactForm from '../containers/contact-form'
 import Footer from '../containers/footer'
 import styles from '../styles/home.module.scss'
 
-const pageMetadata = {
-  title: 'Tratamento para a Depressão da Novo Nascer',
-  site: 'Clínica Hospitalar Novo Nascer',
-  description: 'A Novo Nascer oferece a você um tratamento integral e humanizado para a depressão',
-  url: 'http://localhost:3000/',
-  image: {
-    src: 'http://localhost:3000/logo.webp',
-    alt: 'Logo da Novo Nascer'
-  },
-  lang: 'pt-BR'
-}
-
-export default function Home() {
+export default function Home({ pageMetadata }) {
   const [showFixedHeader, setShowFixedHeader] = useState(false)
 
   useEffect(() => {

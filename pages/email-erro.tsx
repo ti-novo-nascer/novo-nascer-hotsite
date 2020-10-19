@@ -1,7 +1,5 @@
+import EmailFeedback from '../containers/email-feedback'
+
 export default function EmailError() {
-  return (
-    <>
-      <h1>ERRO AO ENVIAR EMAIL!</h1>
-    </>
-  )
+  return <EmailFeedback message='Erro ao enviar o email!'/>
 }

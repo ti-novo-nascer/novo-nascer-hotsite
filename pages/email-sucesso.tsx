@@ -1,7 +1,5 @@
+import EmailFeedback from '../containers/email-feedback'
+
 export default function EmailSuccess() {
-  return (
-    <>
-      <h1>EMAIL ENVIADO COM SUCESSO!</h1>
-    </>
-  )
+  return <EmailFeedback message='Email enviado com sucesso!'/>
 }
