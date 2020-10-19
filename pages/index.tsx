@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Head from 'next/head'
 import { Serp, OpenGraph, TwitterCard } from '../containers/seo'
 import Header from '../containers/header'
 import FixedHeader from '../containers/fixed-header'
@@ -19,8 +18,11 @@ const pageMetadata = {
   site: 'Clínica Hospitalar Novo Nascer',
   description: 'A Novo Nascer oferece a você um tratamento integral e humanizado para a depressão',
   url: 'http://localhost:3000/',
-  image: 'http://localhost:3000/logo.webp',
-  imageAlt: 'Logo da Novo Nascer'
+  image: {
+    src: 'http://localhost:3000/logo.webp',
+    alt: 'Logo da Novo Nascer'
+  },
+  lang: 'pt-BR'
 }
 
 export default function Home() {
@@ -38,28 +40,26 @@ export default function Home() {
   }, [showFixedHeader, setShowFixedHeader])
   return (
     <>
-      <Head>
-        <meta name='author' content='Lucas Alves Costa'/>
-        <Serp
-          title={pageMetadata.title}
-          description={pageMetadata.description}
-          url={pageMetadata.url}
-          isCanonical={true}
-        />
-        <OpenGraph
-          title={pageMetadata.title}
-          type='website'
-          image={pageMetadata.image}
-          url={pageMetadata.url}
-        />
-        <TwitterCard
-          title={pageMetadata.title}
-          site={pageMetadata.site}
-          description={pageMetadata.description}
-          image={pageMetadata.image}
-          imageAlt={pageMetadata.imageAlt}
-        />
-      </Head>
+      <Serp
+        title={pageMetadata.title}
+        description={pageMetadata.description}
+        url={pageMetadata.url}
+        lang={pageMetadata.lang}
+        isCanonical={true}
+      />
+      <OpenGraph
+        title={pageMetadata.title}
+        type='website'
+        image={pageMetadata.image.src}
+        url={pageMetadata.url}
+      />
+      <TwitterCard
+        title={pageMetadata.title}
+        site={pageMetadata.site}
+        description={pageMetadata.description}
+        image={pageMetadata.image.src}
+        imageAlt={pageMetadata.image.alt}
+      />
       <Header/>
       <FixedHeader className={styles.fixedHeader} show={showFixedHeader}/>
       <Presentation/>

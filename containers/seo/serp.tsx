@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 export interface SerpProps {
   title: string
   description: string
@@ -18,7 +20,8 @@ export default function Serp({
   isDefaultAlternate
 }: SerpProps) {
   return (
-    <>
+    <Head>
+      <meta name='author' content='Lucas Alves Costa'/>
       <title>{title}</title>
       <meta name='description' content={description}/>
       {isCanonical && (
@@ -30,6 +33,6 @@ export default function Serp({
       {isDefaultAlternate && (
         <link rel='alternate' href={url} hrefLang='x-default'/>
       )}
-    </>
+    </Head>
   )
 }
