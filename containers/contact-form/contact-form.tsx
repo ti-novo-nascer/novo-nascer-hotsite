@@ -1,10 +1,13 @@
 import Fade from 'react-reveal/Fade'
+import { useRouter } from 'next/router'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import MaskedInput from 'react-text-mask'
 import styles from './contact-form.module.scss'
 
 export default function ContactForm() {
+  const router = useRouter()
+
   const { getFieldProps, touched, errors, isValid, handleSubmit } = useFormik({
     initialValues: {
       name: '',
@@ -30,10 +33,14 @@ export default function ContactForm() {
         },
         body: JSON.stringify(values)
       })
-      const text = await res.text()
-      console.log('Resposta do envio do email: ', text)
+      if (res.status === 200) {
+        router.push('/email-sucesso')
+      } else if (res.status === 400) {
+        router.push('/email-erro')
+      }
     }
   })
+
   return (
     <Fade bottom duration={2000}>
       <form id='contact-form' className={styles.contactForm} onSubmit={handleSubmit}>

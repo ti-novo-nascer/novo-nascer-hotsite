@@ -27,6 +27,7 @@ const pageMetadata = {
 
 export default function Home() {
   const [showFixedHeader, setShowFixedHeader] = useState(false)
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', () => {
@@ -38,6 +39,7 @@ export default function Home() {
       })
     }
   }, [showFixedHeader, setShowFixedHeader])
+
   return (
     <>
       <Serp

@@ -14,7 +14,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
   const message = {
-    to: 'contato@novonascer.com.br',
+    // to: 'contato@novonascer.com.br',
+    to: 'luc.kasnix@gmail.com',
     from: 'ti@novonascer.com.br',
     subject: 'CONTATO DE CLIENTE',
     html: `
@@ -31,10 +32,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     .send(message)
     .then(() => {
       res.status(200).send('Mensagem enviada com sucesso')
-      console.log('Email enviado')
     })
-    .catch((err) => {
+    .catch(() => {
       res.status(400).send('Erro ao enviar a mensagem')
-      console.log('Erro: ', err)
     })
 }
