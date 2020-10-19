@@ -3,7 +3,7 @@ import styles from './content.module.scss'
 
 export default function Content() {
   return (
-    <Fade bottom duration={2000}>
+    <Fade bottom duration={1000}>
       <div className={styles.content}>
         <div className={styles.wrapper}>
           <div className={styles.head}>

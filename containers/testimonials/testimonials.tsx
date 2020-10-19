@@ -34,7 +34,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <Fade bottom duration={2000}>
+    <Fade bottom duration={1000}>
       <div className={styles.testimonials}>
         <div className={styles.wrapper}>
           <div className={styles.head}>

@@ -7,7 +7,7 @@ import styles from './header.module.scss'
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Fade duration={4000}>
+      <Fade duration={2000}>
         <div className={styles.wrapper}>
           <div className={styles.menu}>
             <a href='#contact-form'>

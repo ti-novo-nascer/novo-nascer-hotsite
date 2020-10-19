@@ -42,7 +42,7 @@ export default function ContactForm() {
   })
 
   return (
-    <Fade bottom duration={2000}>
+    <Fade bottom duration={1000}>
       <form id='contact-form' className={styles.contactForm} onSubmit={handleSubmit}>
         <div className={styles.wrapper}>
           <div className={styles.head}>

@@ -50,7 +50,7 @@ const psychiatryTreatments = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Fade duration={4000}>
+      <Fade duration={2000}>
         <div className={styles.wrapper}>
           <div className={styles.forwarding}>
             <div className={styles.brand}>

@@ -3,7 +3,7 @@ import styles from './statistics.module.scss'
 
 export default function Statistics() {
   return (
-    <Fade bottom duration={2000}>
+    <Fade bottom duration={1000}>
       <div className={styles.statistics}>
         <div className={styles.wrapper}>
           <div className={styles.head}>

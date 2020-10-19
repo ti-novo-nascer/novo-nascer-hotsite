@@ -5,7 +5,7 @@ import styles from './call-to-action.module.scss'
 export default function CallToAction() {
   return (
     <div className={styles.callToAction}>
-      <Fade duration={4000}>
+      <Fade duration={2000}>
         <div className={styles.wrapper}>
           <div className={styles.head}>
             <h2>Está precisando de ajuda?</h2>

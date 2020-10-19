@@ -24,7 +24,7 @@ const service = [
 
 export default function Service() {
   return (
-    <Fade bottom duration={2000}>
+    <Fade bottom duration={1000}>
       <div className={styles.service}>
         <div className={styles.wrapper}>
           <div className={styles.head}>
