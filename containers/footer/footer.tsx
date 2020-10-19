@@ -62,44 +62,38 @@ export default function Footer() {
             <div className={styles.list}>
               <h3>Redes Sociais</h3>
               <ul>
-                {socialMedias.map(({ title, link, icon: Icon}) => {
-                  return (
-                    <li key={title}>
-                      <ExternalLink href={link}>
-                        <Icon/>
-                        <span>{title}</span>
-                      </ExternalLink>
-                    </li>
-                  )
-                })}
+                {socialMedias.map(({ title, link, icon: Icon}) => (
+                  <li key={title}>
+                    <ExternalLink href={link}>
+                      <Icon/>
+                      <span>{title}</span>
+                    </ExternalLink>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className={styles.list}>
               <h3>Tratamentos de Depedências</h3>
               <ul>
-                {addictionTreatments.map(({ title, path }) => {
-                  return (
-                    <li key={title}>
-                      <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
-                        <span>{title}</span>
-                      </ExternalLink>
-                    </li>
-                  )
-                })}
+                {addictionTreatments.map(({ title, path }) => (
+                  <li key={title}>
+                    <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
+                      <span>{title}</span>
+                    </ExternalLink>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className={styles.list}>
               <h3>Tratamentos de Psiquiatria</h3>
               <ul>
-                {psychiatryTreatments.map(({ title, path }) => {
-                  return (
-                    <li key={title}>
-                      <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
-                        <span>{title}</span>
-                      </ExternalLink>
-                    </li>
-                  )
-                })}
+                {psychiatryTreatments.map(({ title, path }) => (
+                  <li key={title}>
+                    <ExternalLink href={`${baseUrl}/oque-tratamos/${path}`}>
+                      <span>{title}</span>
+                    </ExternalLink>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
