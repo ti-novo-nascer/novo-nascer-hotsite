@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import Seo from '../containers/seo'
+import Head from 'next/head'
+import { Serp, OpenGraph, TwitterCard } from '../containers/seo'
 import Header from '../containers/header'
 import FixedHeader from '../containers/fixed-header'
 import Presentation from '../containers/presentation'
@@ -13,11 +14,13 @@ import ContactForm from '../containers/contact-form'
 import Footer from '../containers/footer'
 import styles from '../styles/home.module.scss'
 
-const pageData = {
+const pageMetadata = {
   title: 'Tratamento para a Depressão da Novo Nascer',
+  site: 'Clínica Hospitalar Novo Nascer',
   description: 'A Novo Nascer oferece a você um tratamento integral e humanizado para a depressão',
   url: 'http://localhost:3000/',
-  image: 'http://localhost:3000/images/paciente-em-monitoramento.jpg'
+  image: 'http://localhost:3000/logo.webp',
+  imageAlt: 'Logo da Novo Nascer'
 }
 
 export default function Home() {
@@ -35,7 +38,28 @@ export default function Home() {
   }, [showFixedHeader, setShowFixedHeader])
   return (
     <>
-      <Seo {...pageData}/>
+      <Head>
+        <meta name='author' content='Lucas Alves Costa'/>
+        <Serp
+          title={pageMetadata.title}
+          description={pageMetadata.description}
+          url={pageMetadata.url}
+          isCanonical={true}
+        />
+        <OpenGraph
+          title={pageMetadata.title}
+          type='website'
+          image={pageMetadata.image}
+          url={pageMetadata.url}
+        />
+        <TwitterCard
+          title={pageMetadata.title}
+          site={pageMetadata.site}
+          description={pageMetadata.description}
+          image={pageMetadata.image}
+          imageAlt={pageMetadata.imageAlt}
+        />
+      </Head>
       <Header/>
       <FixedHeader className={styles.fixedHeader} show={showFixedHeader}/>
       <Presentation/>
