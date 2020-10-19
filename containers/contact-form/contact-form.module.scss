@@ -59,6 +59,9 @@
     color: #FFFFFF;
     justify-self: center;
     cursor: pointer;
+    &:hover {
+      background: #AAA288;
+    }
     &:disabled {
       opacity: 0.5;
     }

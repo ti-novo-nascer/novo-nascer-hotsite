@@ -53,6 +53,9 @@
       color: #FFFFFF;
       justify-self: center;
       cursor: pointer;
+      &:hover {
+        background: #AAA288;
+      }
     }
   }
 }
