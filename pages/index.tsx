@@ -6,6 +6,7 @@ import Presentation from '../containers/presentation'
 import CallToAction from '../containers/call-to-action'
 import Content from '../containers/content'
 import Motivational from '../containers/motivational'
+import Place from '../containers/place'
 import Statistics from '../containers/statistics'
 import Service from '../containers/service'
 import Testimonials from '../containers/testimonials'
@@ -56,6 +57,7 @@ export default function Home({ pageMetadata }) {
       <CallToAction/>
       <Content/>
       <Motivational/>
+      <Place/>
       <Statistics/>
       <Service/>
       <Testimonials/>
