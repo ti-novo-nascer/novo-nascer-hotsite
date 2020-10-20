@@ -52,13 +52,14 @@
       border-radius: 8px;
       outline: none;
       cursor: pointer;
+      transition: background 400ms;
       span {
         font: bold 20px 'Poppins', sans-serif;
         color: #FFFFFF;
         align-self: center;
       }
       &:hover {
-        background: #95885F;
+        background: #675D3E;
       }
     }
   }
