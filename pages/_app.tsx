@@ -6,9 +6,9 @@ const pageMetadata = {
   title: 'Tratamento para a Depressão da Novo Nascer',
   site: 'Clínica Hospitalar Novo Nascer',
   description: 'A Novo Nascer oferece a você um tratamento integral e humanizado para a depressão',
-  url: 'http://localhost:3000/',
+  url: 'https://depressaotratamento.com.br',
   image: {
-    src: 'http://localhost:3000/logo.webp',
+    src: 'https://depressaotratamento.com.br/logo.png',
     alt: 'Logo da Novo Nascer'
   },
   lang: 'pt-BR'
