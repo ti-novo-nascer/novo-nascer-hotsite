@@ -1,7 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import sgMail from '@sendgrid/mail'
+import emailTemplate from '../../utils/email-template'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const { host } = req.headers
+
   const {
     name,
     email,
@@ -18,14 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     to: 'luc.kasnix@gmail.com',
     from: 'ti@novonascer.com.br',
     subject: 'CONTATO DE CLIENTE',
-    html: `
-      Nome: ${name}<br/>
-      Email: ${email}<br/>
-      Telefone: ${phone}<br/>
-      Cidade: ${city}<br/>
-      Plano de Saúde: ${healthPlan}<br/>
-      Detalhes: ${details}
-    `
+    html: emailTemplate(host, name, email, phone, city, healthPlan, details)
   }
 
   sgMail
@@ -33,7 +29,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     .then(() => {
       res.status(200).send('Mensagem enviada com sucesso')
     })
-    .catch(() => {
+    .catch((err) => {
+      console.log(err)
       res.status(400).send('Erro ao enviar a mensagem')
     })
 }
