@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Serp, OpenGraph, TwitterCard } from '../containers/seo'
+import { GetStaticProps } from 'next'
+import Seo from '../containers/seo'
 import Header from '../containers/header'
 import FixedHeader from '../containers/fixed-header'
 import Presentation from '../containers/presentation'
@@ -31,26 +32,7 @@ export default function Home({ pageMetadata }) {
 
   return (
     <>
-      <Serp
-        title={pageMetadata.title}
-        description={pageMetadata.description}
-        url={pageMetadata.url}
-        lang={pageMetadata.lang}
-        isCanonical={true}
-      />
-      <OpenGraph
-        title={pageMetadata.title}
-        type='website'
-        image={pageMetadata.image.src}
-        url={pageMetadata.url}
-      />
-      <TwitterCard
-        title={pageMetadata.title}
-        site={pageMetadata.site}
-        description={pageMetadata.description}
-        image={pageMetadata.image.src}
-        imageAlt={pageMetadata.image.alt}
-      />
+      <Seo {...pageMetadata}/>
       <Header/>
       <FixedHeader className={styles.fixedHeader} show={showFixedHeader}/>
       <Presentation/>
@@ -65,4 +47,26 @@ export default function Home({ pageMetadata }) {
       <Footer/>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const pageMetadata = {
+    title: 'Tratamento para a Depressão da Novo Nascer',
+    siteName: 'Clínica Hospitalar Novo Nascer',
+    description: 'A Novo Nascer oferece a você um tratamento integral e humanizado para a depressão',
+    url: 'https://depressaotratamento.com.br',
+    image: {
+      url: 'https://depressaotratamento.com.br/logo.png',
+      type: 'image/png',
+      width: '720',
+      height: '480',
+      alt: 'Logo da Clínica Hospitalar Novo Nascer'
+    },
+    locale: 'pt-BR'
+  }
+  return {
+    props: {
+      pageMetadata
+    }
+  }
 }
