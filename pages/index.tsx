@@ -13,6 +13,7 @@ import Service from '../containers/service'
 import Testimonials from '../containers/testimonials'
 import ContactForm from '../containers/contact-form'
 import Footer from '../containers/footer'
+import { getPageMetadata } from '../utils/sanity'
 import styles from '../styles/home.module.scss'
 
 export default function Home({ pageMetadata }) {
@@ -33,8 +34,8 @@ export default function Home({ pageMetadata }) {
   return (
     <>
       <Seo {...pageMetadata}/>
-      <Header/>
-      <FixedHeader className={styles.fixedHeader} show={showFixedHeader}/>
+      <Header phone={pageMetadata.phone}/>
+      <FixedHeader className={styles.fixedHeader} show={showFixedHeader} phone={pageMetadata.phone}/>
       <Presentation/>
       <CallToAction/>
       <Content/>
@@ -50,20 +51,7 @@ export default function Home({ pageMetadata }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const pageMetadata = {
-    title: 'Tratamento para a Depressão da Novo Nascer',
-    siteName: 'Clínica Hospitalar Novo Nascer',
-    description: 'A Novo Nascer oferece a você um tratamento integral e humanizado para a depressão',
-    url: 'https://depressaotratamento.com.br',
-    image: {
-      url: 'https://depressaotratamento.com.br/logo.png',
-      type: 'image/png',
-      width: '720',
-      height: '480',
-      alt: 'Logo da Clínica Hospitalar Novo Nascer'
-    },
-    locale: 'pt-BR'
-  }
+  const pageMetadata = await getPageMetadata()
   return {
     props: {
       pageMetadata

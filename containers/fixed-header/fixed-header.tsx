@@ -3,14 +3,16 @@ import Fade from 'react-reveal/Fade'
 import ExternalLink from '../../components/external-link'
 import TwentyFourHours from '../../components/24-hours'
 import SendEmail from '../../components/send-email'
+import { formatPhone } from '../../utils/functions'
 import styles from './fixed-header.module.scss'
 
 export interface FixedHeaderProps {
   className: string
   show: boolean
+  phone: string
 }
 
-export default function FixedHeader({ className, show }: FixedHeaderProps) {
+export default function FixedHeader({ className, show, phone }: FixedHeaderProps) {
   return (
     <Fade top duration={400}>
       <header
@@ -33,10 +35,10 @@ export default function FixedHeader({ className, show }: FixedHeaderProps) {
             <ExternalLink href='https://www.novonascer.com.br/'>
               <img src='/novo-nascer-simbolo-azul.svg' alt='Logo da Clínica Hospitalar Novo Nascer'/>
             </ExternalLink>
-            <ExternalLink href='https://wa.me/5581973163700'>
+            <ExternalLink href={`https://wa.me/${phone}`}>
               <button>
                 <TwentyFourHours/>
-                <span>(81) 97316-3700</span>
+                <span>{formatPhone(phone)}</span>
               </button>
             </ExternalLink>
           </div>
