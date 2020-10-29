@@ -6,10 +6,20 @@ import { formatPhone } from '../../utils/functions'
 import styles from './header.module.scss'
 
 export interface HeaderProps {
+  email: string
   phone: string
+  title: string
+  subtitle: string
+  credits: string
 }
 
-export default function Header({ phone }: HeaderProps) {
+export default function Header({
+  email,
+  phone,
+  title,
+  subtitle,
+  credits
+}: HeaderProps) {
   return (
     <header className={styles.header}>
       <Fade duration={2000}>
@@ -18,7 +28,7 @@ export default function Header({ phone }: HeaderProps) {
             <a href='#contact-form'>
               <button>
                 <SendEmail/>
-                <span>contato@novonascer.com.br</span>
+                <span>{email}</span>
               </button>
             </a>
             <ExternalLink href='https://www.novonascer.com.br/'>
@@ -32,11 +42,11 @@ export default function Header({ phone }: HeaderProps) {
             </ExternalLink>
           </div>
           <div className={styles.title}>
-            <h1>Conheça o Tratamento para a Depressão da Novo Nascer</h1>
-            <h2>Acredite na Superação</h2>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
           </div>
           <div className={styles.credits}>
-            <span>Direção Técnica: Psiquiatra Dr.<sup>a</sup> Daniela Morais | CRM: 16150 / RQE: 1795</span>
+            <span>{credits}</span>
           </div>
         </div>
       </Fade>

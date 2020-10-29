@@ -9,10 +9,11 @@ import styles from './fixed-header.module.scss'
 export interface FixedHeaderProps {
   className: string
   show: boolean
+  email: string
   phone: string
 }
 
-export default function FixedHeader({ className, show, phone }: FixedHeaderProps) {
+export default function FixedHeader({ className, show, email, phone }: FixedHeaderProps) {
   return (
     <Fade top duration={400}>
       <header
@@ -29,7 +30,7 @@ export default function FixedHeader({ className, show, phone }: FixedHeaderProps
             <a href='#contact-form'>
               <button>
                 <SendEmail/>
-                <span>contato@novonascer.com.br</span>
+                <span>{email}</span>
               </button>
             </a>
             <ExternalLink href='https://www.novonascer.com.br/'>

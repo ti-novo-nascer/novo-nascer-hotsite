@@ -13,10 +13,10 @@ import Service from '../containers/service'
 import Testimonials from '../containers/testimonials'
 import ContactForm from '../containers/contact-form'
 import Footer from '../containers/footer'
-import { getPageMetadata } from '../utils/sanity'
+import { getPageMetadata, getPageContent } from '../utils/sanity'
 import styles from '../styles/home.module.scss'
 
-export default function Home({ pageMetadata }) {
+export default function Home({ pageMetadata, pageContent }) {
   const [showFixedHeader, setShowFixedHeader] = useState(false)
 
   useEffect(() => {
@@ -34,8 +34,19 @@ export default function Home({ pageMetadata }) {
   return (
     <>
       <Seo {...pageMetadata}/>
-      <Header phone={pageMetadata.phone}/>
-      <FixedHeader className={styles.fixedHeader} show={showFixedHeader} phone={pageMetadata.phone}/>
+      <Header
+        email={pageMetadata.email}
+        phone={pageMetadata.phone}
+        title={pageContent.headerTitle}
+        subtitle={pageContent.headerSubtitle}
+        credits={pageContent.headerCredits}
+      />
+      <FixedHeader
+        className={styles.fixedHeader}
+        show={showFixedHeader}
+        email={pageMetadata.email}
+        phone={pageMetadata.phone}
+      />
       <Presentation/>
       <CallToAction/>
       <Content/>
@@ -52,9 +63,11 @@ export default function Home({ pageMetadata }) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const pageMetadata = await getPageMetadata()
+  const pageContent = await getPageContent()
   return {
     props: {
-      pageMetadata
+      pageMetadata,
+      pageContent
     }
   }
 }

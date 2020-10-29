@@ -29,11 +29,25 @@ export const getPageMetadata = async (): Promise<PageMetadata> => {
       url,
       image,
       locale,
+      email,
       phone
     }
   `, { slug })
     .then(res => res[0])
   return pageMetadata
+}
+
+export const getPageContent = async () => {
+  const slug = process.env.SITE_SLUG
+  const pageContent = await client.fetch(`
+    *[_type == 'pageContent' && slug.current == $slug] {
+      headerTitle,
+      headerSubtitle,
+      headerCredits
+    }
+  `, { slug })
+    .then(res => res[0])
+  return pageContent
 }
 
 const builder = imageUrlBuilder(client)
