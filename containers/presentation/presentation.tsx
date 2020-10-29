@@ -13,7 +13,6 @@ export default function Presentation({
   subtitle,
   text
 }: PresentationProps) {
-  console.log('Texto apresentação: ', text)
   return (
     <Fade bottom duration={1000}>
       <div className={styles.presentation}>

@@ -9,44 +9,18 @@ const clientOptions = {
 
 const client = sanityClient(clientOptions)
 
-export interface PageMetadata {
-  slug?: string
-  title: string
-  name?: string
-  description: string
-  url: string
-  image: string
-  locale?: string
-}
-
-export const getPageMetadata = async (): Promise<PageMetadata> => {
+export const getPageData = async () => {
   const slug = process.env.SITE_SLUG
-  const pageMetadata = await client.fetch(`
-    *[_type == 'pageMetadata' && slug.current == $slug] {
-      title,
-      name,
-      description,
-      url,
-      image,
-      locale,
-      email,
-      phone
-    }
-  `, { slug })
-    .then(res => res[0])
-  return pageMetadata
-}
-
-export const getPageContent = async () => {
-  const slug = process.env.SITE_SLUG
-  const pageContent = await client.fetch(`
-    *[_type == 'pageContent' && slug.current == $slug] {
+  const pageData = await client.fetch(`
+    *[_type == 'pageData' && slug.current == $slug] {
+      metadata,
       header,
-      presentation
+      presentation,
+      article
     }
   `, { slug })
     .then(res => res[0])
-  return pageContent
+  return pageData
 }
 
 const builder = imageUrlBuilder(client)
