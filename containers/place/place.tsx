@@ -3,26 +3,27 @@ import Carousel from 'react-bootstrap/Carousel'
 import ExternalLink from '../../components/external-link'
 import Prev from '../../components/prev'
 import Next from '../../components/next'
+import { urlFor, ImageSource } from '../../utils/sanity'
 import styles from './place.module.scss'
 
-const slides = [
-  { path: '/slide-1.webp', alt: 'Foto da Novo Nascer' },
-  { path: '/slide-2.webp', alt: 'Foto da Novo Nascer' },
-  { path: '/slide-3.webp', alt: 'Foto da Novo Nascer' },
-  { path: '/slide-4.webp', alt: 'Foto da Novo Nascer' },
-  { path: '/slide-5.webp', alt: 'Foto da Novo Nascer' },
-  { path: '/slide-6.webp', alt: 'Foto da Novo Nascer' },
-  { path: '/slide-7.webp', alt: 'Foto da Novo Nascer' }
-]
+export interface PlaceProps {
+  title: string
+  subtitle: string
+  photos: ImageSource[]
+}
 
-export default function Place() {
+export default function Place({
+  title,
+  subtitle,
+  photos
+}: PlaceProps) {
   return (
     <Fade bottom duration={1000}>
       <div className={styles.place}>
         <div className={styles.wrapper}>
           <div className={styles.head}>
-            <h2>Onde tratamos</h2>
-            <h3>Ambientes amplos, seguros e rodeados por natureza</h3>
+            <h2>{title}</h2>
+            <h3>{subtitle}</h3>
           </div>
           <div className={styles.body}>
             <Carousel
@@ -30,9 +31,9 @@ export default function Place() {
               nextIcon={<Next/>}
               indicators={false}
             >
-              {slides.map(({ path, alt }, idx) => (
+              {photos.map((photo, idx) => (
                 <Carousel.Item key={idx} className={styles.carouselItem}>
-                  <img src={path} alt={alt}/>
+                  <img src={urlFor(photo).width(720).url()} alt='Foto da Novo Nascer'/>
                 </Carousel.Item>
               ))}
             </Carousel>

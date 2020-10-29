@@ -49,7 +49,7 @@ export default function Home({ pageData }) {
       <CallToAction/>
       <Content {...pageData.article}/>
       <Motivational/>
-      <Place/>
+      <Place {...pageData.place}/>
       <Statistics/>
       <Service/>
       <Testimonials/>

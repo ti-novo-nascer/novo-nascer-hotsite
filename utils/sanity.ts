@@ -16,7 +16,8 @@ export const getPageData = async () => {
       metadata,
       header,
       presentation,
-      article
+      article,
+      place
     }
   `, { slug })
     .then(res => res[0])
@@ -26,6 +27,7 @@ export const getPageData = async () => {
 const builder = imageUrlBuilder(client)
 
 export interface ImageSource {
+  _key?: string
   _type: 'image'
   asset: {
     _type: 'reference'
