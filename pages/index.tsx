@@ -50,7 +50,7 @@ export default function Home({ pageData }) {
       <Content {...pageData.article}/>
       <Motivational/>
       <Place {...pageData.place}/>
-      <Statistics/>
+      <Statistics {...pageData.statistics}/>
       <Service/>
       <Testimonials/>
       <ContactForm/>

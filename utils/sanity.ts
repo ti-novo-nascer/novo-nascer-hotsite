@@ -17,7 +17,8 @@ export const getPageData = async () => {
       header,
       presentation,
       article,
-      place
+      place,
+      statistics
     }
   `, { slug })
     .then(res => res[0])
