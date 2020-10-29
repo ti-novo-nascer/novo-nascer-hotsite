@@ -37,9 +37,7 @@ export default function Home({ pageMetadata, pageContent }) {
       <Header
         email={pageMetadata.email}
         phone={pageMetadata.phone}
-        title={pageContent.headerTitle}
-        subtitle={pageContent.headerSubtitle}
-        credits={pageContent.headerCredits}
+        {...pageContent.header}
       />
       <FixedHeader
         className={styles.fixedHeader}
@@ -47,7 +45,7 @@ export default function Home({ pageMetadata, pageContent }) {
         email={pageMetadata.email}
         phone={pageMetadata.phone}
       />
-      <Presentation/>
+      <Presentation {...pageContent.presentation}/>
       <CallToAction/>
       <Content/>
       <Motivational/>

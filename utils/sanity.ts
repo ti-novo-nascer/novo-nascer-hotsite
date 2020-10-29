@@ -41,9 +41,8 @@ export const getPageContent = async () => {
   const slug = process.env.SITE_SLUG
   const pageContent = await client.fetch(`
     *[_type == 'pageContent' && slug.current == $slug] {
-      headerTitle,
-      headerSubtitle,
-      headerCredits
+      header,
+      presentation
     }
   `, { slug })
     .then(res => res[0])

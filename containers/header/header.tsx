@@ -9,7 +9,7 @@ export interface HeaderProps {
   email: string
   phone: string
   title: string
-  subtitle: string
+  slogan: string
   credits: string
 }
 
@@ -17,7 +17,7 @@ export default function Header({
   email,
   phone,
   title,
-  subtitle,
+  slogan,
   credits
 }: HeaderProps) {
   return (
@@ -43,7 +43,7 @@ export default function Header({
           </div>
           <div className={styles.title}>
             <h1>{title}</h1>
-            <h2>{subtitle}</h2>
+            <h2>{slogan}</h2>
           </div>
           <div className={styles.credits}>
             <span>{credits}</span>
