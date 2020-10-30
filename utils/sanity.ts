@@ -18,7 +18,8 @@ export const getPageData = async () => {
       presentation,
       article,
       place,
-      statistics
+      statistics,
+      testimonials
     }
   `, { slug })
     .then(res => res[0])

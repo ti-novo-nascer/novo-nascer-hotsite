@@ -10,3 +10,11 @@ export const formatPhone = (phone: string) => {
     throw new Error('O número fornecido é inválido!')
   }
 }
+
+export const addEllipsis = (text: string, limit: number) => {
+  const ellipsis = '...'
+  if (text.length > limit) {
+    text = text.substring(0, limit) + ellipsis
+  }
+  return text
+}

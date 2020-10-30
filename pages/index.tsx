@@ -52,7 +52,7 @@ export default function Home({ pageData }) {
       <Place {...pageData.place}/>
       <Statistics {...pageData.statistics}/>
       <Service/>
-      <Testimonials/>
+      <Testimonials {...pageData.testimonials}/>
       <ContactForm/>
       <Footer/>
     </>
