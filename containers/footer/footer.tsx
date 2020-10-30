@@ -73,7 +73,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className={styles.list}>
-              <h3>Tratamentos de Depedências</h3>
+              <h3>Tratamentos de Dependências</h3>
               <ul>
                 {addictionTreatments.map(({ title, path }) => (
                   <li key={title}>
