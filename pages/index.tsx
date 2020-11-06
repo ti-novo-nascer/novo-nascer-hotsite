@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import Seo from '../containers/seo'
 import Header from '../containers/header'
 import FixedHeader from '../containers/fixed-header'
+import WhatsAppButton from '../components/whatsapp-button'
 import Presentation from '../containers/presentation'
 import CallToAction from '../containers/call-to-action'
 import Content from '../containers/content'
@@ -43,6 +44,10 @@ export default function Home({ pageData }) {
         className={styles.fixedHeader}
         show={showFixedHeader}
         email={pageData.metadata.email}
+        phone={pageData.metadata.phone}
+      />
+      <WhatsAppButton
+        className={styles.whatsAppButton}
         phone={pageData.metadata.phone}
       />
       <Presentation {...pageData.presentation}/>
