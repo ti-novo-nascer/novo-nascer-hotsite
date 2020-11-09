@@ -33,4 +33,38 @@
     text-indent: 40px;
     text-align: justify;
   }
+  ul {
+    display: grid;
+    justify-items: start;
+    gap: 16px;
+    li {
+      text-indent: 40px;
+      list-style: circle inside;
+      font: bold 16px/180% 'Poppins', sans-serif;
+      color: #707070;
+    }
+  }
+  figure {
+    margin-bottom: 16px;
+    text-align: center;
+    img {
+      margin-bottom: 4px;
+      width: 480px;
+    }
+    figcaption {
+      margin-bottom: 4px;
+      font: 14px/180% 'Poppins', sans-serif;
+      color: #707070;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
