@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import sgMail from '@sendgrid/mail'
-import emailTemplate from '../../utils/email-template'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { host } = req.headers
@@ -20,7 +19,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     to: 'clinicanovonascer@gmail.com',
     from: 'ti@novonascer.com.br',
     subject: 'CONTATO DE CLIENTE',
-    html: emailTemplate(host, name, email, phone, city, healthPlan, details)
+    text: `
+      Origem: ${host}
+      Nome: ${name}
+      Email: ${email}
+      Telefone: ${phone}
+      Cidade: ${city}
+      Plano de Saúde: ${healthPlan}
+      Detalhes: ${details}
+    `
   }
 
   sgMail
