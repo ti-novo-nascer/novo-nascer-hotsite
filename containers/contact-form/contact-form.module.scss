@@ -24,6 +24,20 @@
     color: #A09678;
     text-align: center;
   }
+  a {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 8px;
+    font: bold 18px 'Poppins', sans-serif;
+    color: #A09678;
+    svg {
+      width: 24px;
+      path {
+        fill: #A09678;
+      }
+    }
+  }
 }
 
 .body {

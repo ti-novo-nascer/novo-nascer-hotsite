@@ -3,9 +3,20 @@ import { useRouter } from 'next/router'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import MaskedInput from 'react-text-mask'
+import Email from '../../components/email'
+import Phone from '../../components/phone'
+import { formatPhone } from '../../utils/functions'
 import styles from './contact-form.module.scss'
 
-export default function ContactForm() {
+export interface ContactFormProps {
+  email: string
+  phone: string
+}
+
+export default function ContactForm({
+  email,
+  phone
+}: ContactFormProps) {
   const router = useRouter()
 
   const { getFieldProps, touched, errors, isValid, handleSubmit } = useFormik({
@@ -48,6 +59,14 @@ export default function ContactForm() {
           <div className={styles.head}>
             <h2>Converse conosco</h2>
             <h3>Estamos preparados para lhe atender da melhor forma possível</h3>
+            <a href={`tel:${phone}`}>
+              <Email/>
+              {formatPhone(phone)}
+            </a>
+            <a href={`mailto:${email}`}>
+              <Phone/>
+              {email}
+            </a>
           </div>
           <div className={styles.body}>
             <div>

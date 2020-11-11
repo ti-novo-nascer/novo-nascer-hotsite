@@ -58,7 +58,10 @@ export default function Home({ pageData }) {
       <Statistics {...pageData.statistics}/>
       <Service/>
       <Testimonials {...pageData.testimonials}/>
-      <ContactForm/>
+      <ContactForm
+        email={pageData.metadata.email}
+        phone={pageData.metadata.phone}
+      />
       <Footer/>
     </>
   )
