@@ -16,7 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
   const message = {
-    to: 'clinicanovonascer@gmail.com',
+    to: 'novonascercontato@gmail.com',
     from: 'ti@novonascer.com.br',
     subject: 'CONTATO DE CLIENTE',
     text: `
